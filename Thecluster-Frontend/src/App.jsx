@@ -1,16 +1,18 @@
-import { useState } from 'react'
+import Content from './Content'
+import Header from './Header'
+import Footer from './Footer'
+import './App.css'
 
 function App() {
 
   return (
-    <div>
-      <h1>Test1</h1>
-      <div>
-        <p>
-          Test2
-        </p>
-      </div>
-    </div>
+  <>
+    <Header/>
+    <Content/>
+    <Footer/>
+
+  </>
+
   )
 }
 
