@@ -6,12 +6,13 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState('No name was given :(');
   const sub = () =>{
     axios.get('http://localhost:8080/api')
     .then(function (response) {
       // handle success
-      console.log(response);
+      console.log(response.data.user);
+      setUser(response.data.user);
     })
     .catch(function (error) {
       // handle error
@@ -22,18 +23,14 @@ function App() {
     });
   
   };
-  // useEffect(() => {
-  //   fetch('http://localhost:8080/api')
-  //     .then(response => response.json())
-  //     .then(data => setUser(data.user))
-  //     .catch(error => console.log(error));
-  // }, []);
+
 
 
   return (
     <>
       <Header/>
       <Content />
+      <h1 className='text-center p-5'>{user}</h1>
       <button onClick={sub} className="w-25 mx-auto btn btn-info">sub</button>
       <Footer />
     </>
