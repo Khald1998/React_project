@@ -1,4 +1,4 @@
-import "./Footer.css";
+import "./Style/Footer.css";
 function Footer() {
   return (
     <footer className="footer mt-auto">
