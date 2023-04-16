@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import Compose from "./Compose/Compose";
 import ContactUs from "./ContactUs/ContactUs";
 import AboutUs from "./AboutUs/AboutUs";
-// import Requests from "./Requests/Requests";
+import Requests from "./Requests/Requests";
 import LogIn from "./LogIn/LogIn";
 import SignIn from "./SignIn/SignIn";
 import MainPage from "./MainPage/MainPage";
@@ -28,7 +28,7 @@ function App() {
         <Route path="/SignIn" exact Component={SignIn}/>
         <Route path="/LogIn" exact Component={LogIn}/>
         <Route path="/ContactUs" exact Component={ContactUs}/>
-        {/* <Route path="/Requests" exact Component={Requests}/> */}
+        <Route path="/Request" exact Component={Requests}/>
 
         </Routes>
         <Footer />
