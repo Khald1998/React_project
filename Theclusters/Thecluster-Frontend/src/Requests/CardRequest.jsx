@@ -2,7 +2,7 @@ import ".././Style/CardRequest.css";
 function CardRequest() {
   return (
     <>
-        <div class="solution_cards_box col-4 ">
+        <div class="solution_cards_box ">
           <div class="solution_card">
             <div class="hover_color_bubble"></div>
 
