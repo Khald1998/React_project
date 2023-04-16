@@ -1,5 +1,5 @@
 import ".././Style/CardRequest.css";
-function CardRequest() {
+function CardRequest(props) {
   return (
     <>
         <div className="solution_cards_box ">
@@ -7,17 +7,18 @@ function CardRequest() {
             <div className="hover_color_bubble"></div>
 
             <div className="solu_title">
-              <h3>Demo 1</h3>
+              <h1>{props.Name}</h1>
+              <h5>{props.Cluster}</h5>
             </div>
-            <div className="solu_description">
-              <p>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-              </p>
+            <div className="solu_description mb-5">
+              <p>{props.Idea}</p>
             </div>
-            <div className="solu_description ">
+            <div className="solu_description mt-5">
               <button type="button" className=" ">
                 Read More
+              </button>
+              <button type="button" className="ms-sm-5 ms-2 " value={props.Phone}>
+                Contact the student
               </button>
             </div>
           </div>

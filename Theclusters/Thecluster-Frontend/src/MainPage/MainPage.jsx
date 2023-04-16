@@ -1,9 +1,17 @@
 import Button from "./Button";
+
 function MainPage() {
+  const handleClick = (props) => {
+    const url="http://localhost:3000/"+props.target.value
+    console.log(url);
+    window.location.href = url;
+
+  };
+
   return (
     <div className="container text-center my-5">
       <div className="row">
-        <h1 >Welcome to My App</h1>
+        <h1>Welcome to My App</h1>
       </div>
       <div className="row">
         <p className="lead">
@@ -13,8 +21,8 @@ function MainPage() {
       </div>
 
       <div className="row d-flex justify-content-center">
-        <Button name="Add request" value="Add" />
-        <Button name="View request" value="View" />
+        <Button name="Add request" value="Compose" onClick={handleClick} />
+        <Button name="View request" value="Request" onClick={handleClick} />
       </div>
     </div>
   );
