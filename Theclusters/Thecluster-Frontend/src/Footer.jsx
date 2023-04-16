@@ -2,6 +2,7 @@ import "./Style/Footer.css";
 function Footer() {
   return (
     <footer className="footer mt-auto">
+      
         <div className="container text-center">
             <div className="row pb-2 pt-4 item social">
               <div className="col item social ">

@@ -1,8 +1,8 @@
-import "./Style/Header.css";
+// import "./Style/Header.css";
 function Header() {
   return (
     <>
-      <div className="">
+      <div className="d-none d-sm-block">
         <nav className="navbar navbar-expand bg-light py-3 ">
           <p className="navbar-brand my-auto ms-lg-5 mx-auto ">
             The cluster of the clusters
@@ -39,7 +39,48 @@ function Header() {
         </nav>
       </div>
 
-      <div className="d-block d-sm-none">
+      <div className=" d-block d-sm-none ">
+
+      <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+      <li className="nav-item">
+                <a className="nav-link " href="/">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/Compose">
+                  Compose A Request
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/Request">
+                  All The Request
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/AboutUs">
+                  About Us
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link " href="/ContactUs">
+                  Contact Me
+                </a>
+              </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
 
       </div>
     </>

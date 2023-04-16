@@ -1,7 +1,7 @@
 function Button(props) {
   return (
     <>
-      <div className="col-2 my-1 ">
+      <div className="col-lg-2 col-6 my-4 ">
         <button
           name={props.name}
           value={props.value}

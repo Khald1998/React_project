@@ -13,6 +13,7 @@ import Requests from "./Requests/Requests";
 import LogIn from "./LogIn/LogIn";
 import SignIn from "./SignIn/SignIn";
 import MainPage from "./MainPage/MainPage";
+import 'bootstrap/dist/css/bootstrap.css'
 
 import "./Style/App.css";
 
