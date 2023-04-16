@@ -3,7 +3,7 @@ import Select from "./Select";
 import TextArea from "./TextArea";
 import Button from "./Button";
 
-function FormArea() {
+function Compose() {
   return (
     <form action="http://localhost:8080/data" method="post">
       <div className="container my-5">
@@ -17,4 +17,4 @@ function FormArea() {
   );
 }
 
-export default FormArea;
+export default Compose;
