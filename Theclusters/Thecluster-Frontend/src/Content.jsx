@@ -1,12 +1,12 @@
 
-function Content() {
+function Content(props) {
 
   return (
     <div className="text-center p-5 m-5">
-      <h1>Test1</h1>
+      <h1>Your name is </h1>
       <div>
         <p>
-          Test2
+          {props.name}
         </p>
       </div>
     </div>
