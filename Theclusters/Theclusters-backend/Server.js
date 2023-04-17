@@ -13,7 +13,8 @@ const Data = {
     id: '',
     name: '',
     phone: '',
-    idea: ''
+    idea: '',
+    claster: ''
 };
 
 // Initialize an empty array with the same object type
@@ -32,9 +33,8 @@ app.get('/Data', function (req, res) {
 });
 
 app.post('/data', (req, res) => {
-    data = req.body
-    console.log(data);
-    const newData = { id: `${DataArray.length+1}`, name: data.user_name, phone: data.user_phone, idea: data.idea };
+    console.log(req.body);
+    const newData = { id: `${DataArray.length+1}`, name: req.body.name, phone: req.body.phone, idea: req.body.idea,claster:req.body.cluster };
     DataArray.push(newData);
     res.redirect('http://localhost:3000/');
 });

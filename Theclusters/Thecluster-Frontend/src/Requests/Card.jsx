@@ -10,20 +10,20 @@ function Card(props) {
           <div className="hover_color_bubble"></div>
           <div className="solu_title row">
             <div className="col-md-6 text-start">
-              <h1>Name Name</h1>
+              <h1>{props.name}</h1>
             </div>
             <div className="col-md-6 text-start">
-              <h1>Cluster1</h1>
+              <h1>{props.cluster}</h1>
             </div>
           </div>
           <div className="solu_description">
             <p className="text-justify pb-4 pt-3">
-              {(bal + bal + bal + bal + bal).substring(0, 400) + " ........."}
+              {(props.idea).substring(0, 400) + " ........."}
             </p>
             <button type="button" className=" ">
               Read More
             </button>
-            <button type="button" className=" ms-5">
+            <button value={props.phone} type="button" className=" ms-5">
               Contact User
             </button>
           </div>
