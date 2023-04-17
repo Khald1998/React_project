@@ -1,7 +1,8 @@
 
 
-  .section_our_solution .row {
-    align-items: center;
+  .solution_cards_box  {
+    float: left;
+    
   }
   
   .our_solution_category {

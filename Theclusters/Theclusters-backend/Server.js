@@ -10,7 +10,7 @@ const corsOptions = {
 const port = 8080
 // Initialize an empty object with id and name
 const Data = {
-    id: null,
+    id: '',
     name: '',
     phone: '',
     idea: ''
@@ -34,7 +34,7 @@ app.get('/Data', function (req, res) {
 app.post('/data', (req, res) => {
     data = req.body
     console.log(data);
-    const newData = { id: DataArray.length+1, name: data.name, phone: data.phone, idea: data.idea };
+    const newData = { id: `${DataArray.length+1}`, name: data.user_name, phone: data.user_phone, idea: data.idea };
     DataArray.push(newData);
     res.redirect('http://localhost:3000/');
 });

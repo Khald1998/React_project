@@ -1,11 +1,11 @@
 import ".././Style/Card.css";
 
-function Card() {
+function Card(props) {
   const bal =
     "Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cras mattis iudicium purus sit amet fermentum.";
   return (
     <>
-      <div className="solution_cards_box ">
+      <div className="solution_cards_box my-5 col-xll-4 col-xl-4 col-md-6 col-sm-6 col-xs-12 col-12">
         <div className="solution_card py-5 my-0">
           <div className="hover_color_bubble"></div>
           <div className="solu_title row">

@@ -10,7 +10,7 @@ function Compose() {
         <Input placeholder="Your Name" name="user_name"/>
         <Input placeholder="Your Phone" name="user_phone"/>
         <Select />
-        <TextArea placeholder="Your Idea" row={4} col={40} />
+        <TextArea placeholder="Your Idea" row={4} col={40} name="your_idea"/>
         <Button />
       </div>
     </form>
