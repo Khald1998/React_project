@@ -22,7 +22,7 @@ function MainPage() {
 
       <div className="row d-flex justify-content-center">
         <Button name="Add request" value="Compose" onClick={handleClick} />
-        <Button name="View request" value="Request" onClick={handleClick} />
+        <Button name="View requests" value="Requests" onClick={handleClick} />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   BrowserRouter,
   Routes, // instead of "Switch"
@@ -16,6 +16,7 @@ import MainPage from "./MainPage/MainPage";
 import 'bootstrap/dist/css/bootstrap.css'
 
 import "./Style/App.css";
+import Post from "./Post/Post";
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         <Route path="/SignIn" exact Component={SignIn}/>
         <Route path="/LogIn" exact Component={LogIn}/>
         <Route path="/ContactUs" exact Component={ContactUs}/>
-        <Route path="/Request" exact Component={Requests}/>
+        <Route path="/Requests" exact Component={Requests}/>
+        <Route path="/Requests/:_id" exact Component={Post}/>
 
         </Routes>
         <Footer />

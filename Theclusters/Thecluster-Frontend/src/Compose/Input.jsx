@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 function Input(props) {
   const [valueInpute, setvalue] = useState("");
   function inputChange(event) {
