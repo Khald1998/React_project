@@ -92,7 +92,7 @@ app.post('/DataAdd', async (req, res, next) => {
     const newPerson = new Person({ name, phone, idea, cluster });
     await newPerson.save();
     console.log(`${name} was added!`);
-    res.redirect('http://localhost:3000/');
+    res.redirect('http://localhost:3000/Requests');
   } catch (err) {
     console.log(err);
     res.status(500).send("Internal Server Error");

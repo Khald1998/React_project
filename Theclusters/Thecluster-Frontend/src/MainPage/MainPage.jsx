@@ -1,13 +1,17 @@
 import Button from "./Button";
+import { Navigate } from "react-router-dom";
+import React from "react";
 
 function MainPage() {
-  const handleClick = (props) => {
-    const url="http://localhost:3000/"+props.target.value
-    console.log(url);
-    window.location.href = url;
+  const [goToCompose, stGoToCompose] = React.useState(false);
+  const [goToRequests, stGoToRequests] = React.useState(false);
 
-  };
-
+  if (goToCompose) {
+    return <Navigate to="/Compose" />;
+  }
+  if (goToRequests) {
+    return <Navigate to="/Requests" />;
+  }
   return (
     <div className="container text-center my-5">
       <div className="row">
@@ -15,14 +19,24 @@ function MainPage() {
       </div>
       <div className="row">
         <p className="lead">
-          This is a generic Bootstrap main page in React without a navigation
-          bar and footer.
+          This app will help you coordinate with other students for senior
+          project for capstone.
         </p>
       </div>
 
       <div className="row d-flex justify-content-center">
-        <Button name="Add request" value="Compose" onClick={handleClick} />
-        <Button name="View requests" value="Requests" onClick={handleClick} />
+        <Button
+          name="Add request"
+          onClick={() => {
+            stGoToCompose(true);
+          }}
+        />
+        <Button
+          name="View requests"
+          onClick={() => {
+            stGoToRequests(true);
+          }}
+        />
       </div>
     </div>
   );

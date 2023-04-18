@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 function Button(props) {
   return (
     <>
@@ -6,7 +5,6 @@ function Button(props) {
         <button
           name={props.name}
           onClick={props.onClick}
-          value={props.value}
           className="text-center  btn btn-info"
         >
           {props.name}
