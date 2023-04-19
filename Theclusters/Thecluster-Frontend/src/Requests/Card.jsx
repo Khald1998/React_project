@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ButtonS from "./ButtonS";
 import Watch from "./Watch";
 import TL from "./Text-limit";
-import "./Card.css";
+import CardCSS from"./Card.module.css";
 
 function Card(props) {
   const urlW = "https://api.whatsapp.com/send?phone="+props.phone
@@ -45,10 +45,10 @@ function Card(props) {
 
   return (
     <>
-      <div className=" solution_cards_box my-4 col-xl-4 col-md-6 col-sm-6 col-xs-12 col-12">
-        <div className=" solution_card py-5 my-0">
-          <div className=" hover_color_bubble"></div>
-          <div className=" solu_title row">
+      <div className={CardCSS.solution_cards_box+" my-4 col-xl-4 col-md-6 col-sm-6 col-xs-12 col-12"}>
+        <div className={CardCSS.solution_card+" py-5 my-0"}>
+          <div className={CardCSS.hover_color_bubble}></div>
+          <div className={CardCSS.solu_title+" row"}>
             <div className=" col-9 text-start">
               <TL className="h4" text={props.name} limit={15} />
             </div>
@@ -56,9 +56,9 @@ function Card(props) {
               <p className="h5">{`Cluster:${props.cluster}`}</p>
             </div>
           </div>
-          <div className=" solu_description">
+          <div className={CardCSS.solu_description}>
             <TL
-              className="min-h text-justify pb-2 pt-2"
+              className={CardCSS.min_h+" text-justify pb-2 pt-2"}
               text={props.idea}
               limit={400}
             />

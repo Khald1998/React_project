@@ -5,7 +5,7 @@ import Alart from "../Compose/Alart";
 import Button from "./Button";
 import Watch from "../Requests/Watch";
 import axios from "axios";
-import "./Post.css";
+import PostCSS from"./Post.module.css";
 
 function Post() {
   const { id } = useParams();
@@ -29,25 +29,25 @@ function Post() {
   return (
     <>
       <Alart text="Requeses will be deleted after 2 days." className="mt-5" />
-      <div className=" solution_cards_box m-lg-5 m-md-5  ">
-        <div className="vh-100 solution_card  m-lg-5 m-md-5 ">
-          <div className=" solu_title row mt-5">
-            <div className=" col-lg-10 col-md-10 col-sm-12 col-xs-12 text-start">
+      <div className={PostCSS.solution_cards_box +" m-lg-5 m-md-5  "}>
+        <div className={PostCSS.solution_card+" m-lg-5 m-md-5 "}>
+          <div className={PostCSS.solu_title+" row mt-5"}>
+            <div className=" col-lg-10 col-md-9 col-sm-12 col-xs-12 text-start">
               <p className="h1">{data.name}</p>
             </div>
-            <div className=" col-lg-2 col-md-2 col-sm-12 col-xs-12 text-lg-end text-md-end text-sm-start text-xs-start">
+            <div className=" col-lg-2 col-md-3 col-sm-12 col-xs-12 text-lg-end text-md-end text-sm-start text-xs-start">
               <p className="h2">{`Cluster: ${data.cluster}`}</p>
             </div>
             <p className="h2">{`Phone: ${data.phone}`}</p>
           </div>
-          <div className=" solu_description">
-            <p className="min-h text-justify m-5  pb-2 pt-2">{data.idea}</p>
+          <div className={PostCSS.solu_description}>
+            <p className={PostCSS.min_h+" "+PostCSS.ppp+" lead text-justify mx-lg-5 mx-md-5 mx-sm-0 mx-xs-0 my-sm-4 my-xs-4  pb-2 pt-lg-2 pt-md-2 pt-sm-2 pt-xm-2"}>{data.idea}</p>
             {/* <Watch timeColor={"red"} timeString={timeString} /> */}
-            {/* <Button
+            <Button
               value="Contact"
               text="Contact User"
               onClick={handleClick}
-            /> */}
+            />
           </div>
         </div>
       </div>

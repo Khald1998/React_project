@@ -1,8 +1,8 @@
 function Button(props) {
   return (
     <>
-      <div className=" d-inline-block col-6 my-1">
-        <button value={props.value} onClick={props.onClick} type="button" className="">
+      <div className=" d-inline-block ms-lg-5 ms-md-5 mb-5">
+        <button value={props.value} onClick={props.onClick} type="button" className={props.buttonS}>
           {props.text}
         </button>
       </div>
