@@ -77,7 +77,7 @@ app.get('/DataAll', async (req, res, next) => {
 });
 app.get("/Find/:id", async (req, res) => {
   try {
-    const person = await Person.findById(req.params._id);
+    const person = await Person.findById(req.params.id);
     res.json(person);
   } catch (error) {
     console.error(error);

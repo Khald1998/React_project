@@ -48,7 +48,7 @@ function Requests() {
 
   return (
     <>
-      <Alart />
+      <Alart text="Requeses will be deleted after 2 days." className="mt-5"/>
 
       <div className="container my-5">
         <div className="row">

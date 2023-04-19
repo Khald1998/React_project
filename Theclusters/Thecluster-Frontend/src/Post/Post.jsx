@@ -1,22 +1,23 @@
 import { useState, useEffect } from "react";
-import ".././Style/Card.css";
 
 import { useParams } from "react-router-dom";
 import Alart from "../Compose/Alart";
-import ButtonS from "../Requests/ButtonS";
+import Button from "./Button";
 import Watch from "../Requests/Watch";
 import axios from "axios";
+import "./Post.css";
 
 function Post() {
-  const { _id } = useParams();
+  const { id } = useParams();
   const [data, setData] = useState([]);
   const urlW = "https://api.whatsapp.com/send?phone=" + data.phone;
-  const handleClick = () => {window.location.href = urlW;};
-
+  const handleClick = () => {
+    window.location.href = urlW;
+  };
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/Find/${_id}`)
+      .get(`http://localhost:8080/Find/${id}`)
       .then((res) => {
         setData(res.data);
       })
@@ -25,29 +26,28 @@ function Post() {
       });
   }, []);
 
-  
-
   return (
     <>
-      <Alart />
-      <div className=" solution_cards_box m-5 ">
-        <div className="vh-100 solution_card  m-5 ">
-          <div className=" solu_title row">
-            <div className=" col-10 text-start">
+      <Alart text="Requeses will be deleted after 2 days." className="mt-5" />
+      <div className=" solution_cards_box m-lg-5 m-md-5  ">
+        <div className="vh-100 solution_card  m-lg-5 m-md-5 ">
+          <div className=" solu_title row mt-5">
+            <div className=" col-lg-10 col-md-10 col-sm-12 col-xs-12 text-start">
               <p className="h1">{data.name}</p>
             </div>
-            <div className=" col-2 text-end">
-              <p className="h2">{`Cluster:${data.cluster}`}</p>
+            <div className=" col-lg-2 col-md-2 col-sm-12 col-xs-12 text-lg-end text-md-end text-sm-start text-xs-start">
+              <p className="h2">{`Cluster: ${data.cluster}`}</p>
             </div>
+            <p className="h2">{`Phone: ${data.phone}`}</p>
           </div>
           <div className=" solu_description">
-            <p className="min-h text-justify pb-2 pt-2">{data.idea}</p>
+            <p className="min-h text-justify m-5  pb-2 pt-2">{data.idea}</p>
             {/* <Watch timeColor={"red"} timeString={timeString} /> */}
-            <ButtonS
+            {/* <Button
               value="Contact"
               text="Contact User"
               onClick={handleClick}
-            />
+            /> */}
           </div>
         </div>
       </div>

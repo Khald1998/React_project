@@ -1,8 +1,8 @@
-import ".././Style/Card.css";
 import { useState, useEffect } from "react";
 import ButtonS from "./ButtonS";
 import Watch from "./Watch";
 import TL from "./Text-limit";
+import "./Card.css";
 
 function Card(props) {
   const urlW = "https://api.whatsapp.com/send?phone="+props.phone
