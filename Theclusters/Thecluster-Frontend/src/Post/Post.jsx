@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
 import { useParams } from "react-router-dom";
-import Alart from "../Compose/Alart";
+import Alart from "./Alart";
 import Button from "./Button";
-import Watch from "../Requests/Watch";
+// import Watch from "./Watch";
 import axios from "axios";
 import PostCSS from"./Post.module.css";
 
@@ -26,6 +26,7 @@ function Post() {
       });
   }, []);
 
+
   return (
     <>
       <Alart text="Requeses will be deleted after 2 days." className="mt-5" />
@@ -42,7 +43,7 @@ function Post() {
           </div>
           <div className={PostCSS.solu_description}>
             <p className={PostCSS.min_h+" "+PostCSS.ppp+" lead text-justify mx-lg-5 mx-md-5 mx-sm-0 mx-xs-0 my-sm-4 my-xs-4  pb-2 pt-lg-2 pt-md-2 pt-sm-2 pt-xm-2"}>{data.idea}</p>
-            {/* <Watch timeColor={"red"} timeString={timeString} /> */}
+            {/* <Watch timeColor={timeColor} timeString={timeString} /> */}
             <Button
               value="Contact"
               text="Contact User"

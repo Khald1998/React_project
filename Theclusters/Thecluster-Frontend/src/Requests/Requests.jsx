@@ -2,29 +2,20 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Card from "./Card";
 import Nothing from "./Nothing";
-import Alart from "../Compose/Alart";
+import Alart from "./Alart";
 
 function creatCard(data) {
-  if (
-    data.hasOwnProperty("name") &&
-    data.hasOwnProperty("phone") &&
-    data.hasOwnProperty("cluster") &&
-    data.hasOwnProperty("idea")
-  ) {
-    return (
-      <Card
-        _id={data._id}
-        key={data._id}
-        name={data.name}
-        phone={data.phone}
-        cluster={data.cluster}
-        idea={data.idea}
-        createdAt={data.createdAt}
-      />
-    );
-  } else {
-    return <Nothing />;
-  }
+  return (
+    <Card
+      _id={data._id}
+      key={data._id}
+      name={data.name}
+      phone={data.phone}
+      cluster={data.cluster}
+      idea={data.idea}
+      createdAt={data.createdAt}
+    />
+  );
 }
 
 function Requests() {
@@ -38,17 +29,17 @@ function Requests() {
         setData(response.data);
       })
       .catch((error) => {
-        if (error.response && error.response.status === 404) {
+        if (error.response.status !== 200) {
           setIsError(true);
         } else {
-          console.log(error);
+          setIsError(false);
         }
       });
   }, []);
 
   return (
     <>
-      <Alart text="Requeses will be deleted after 2 days." className="mt-5"/>
+      <Alart text="Requeses will be deleted after 2 days." className="mt-5" />
 
       <div className="container my-5">
         <div className="row">
