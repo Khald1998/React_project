@@ -7,7 +7,7 @@ function MainPage() {
   const [goToRequests, stGoToRequests] = React.useState(false);
 
   if (goToCompose) {
-    return <Navigate to="/Compose" />;
+    return <Navigate  to="/Compose" />;
   }
   if (goToRequests) {
     return <Navigate to="/Requests" />;
