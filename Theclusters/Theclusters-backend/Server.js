@@ -11,21 +11,21 @@ const corsOptions = {
   optionSuccessStatus: 200
 };
 
-const port = process.env.PORT || 8080;
-const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/cluster';
-const MINUTES_TO_KEEP_RECORDS = process.env.TIME_TO_DELETE || (180);
+const port = 8080;
+// const dbUrl = 'mongodb://127.0.0.1:27017/cluster';
+const dbUrl ='mongodb+srv://myapp:myapp123123@tcoc.ii33cir.mongodb.net/cluster';
+
+const MINUTES_TO_KEEP_RECORDS = 180;
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors(corsOptions));
 
-mongoose.connect(dbUrl, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
+mongoose.connect(dbUrl)
+.then(() => {
   console.log("Connected to database");
-  mongoose.set('debug', true);
+  mongoose.set('debug', false);
 }).catch((err) => {
   console.log("Error connecting to database", err);
 });

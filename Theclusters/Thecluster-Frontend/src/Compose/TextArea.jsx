@@ -9,7 +9,7 @@ function TextArea(props) {
   }
   return (
     <div className="form-outline my-3 mx-auto mw-50 ">
-      <textarea maxlength="2000" style={{ resize: "none" }} onChange={inputChange} value={valueInput} className="form-control " id="form4Example3" cols={props.col} rows={props.row} placeholder={props.placeholder} name={props.name}></textarea>
+      <textarea maxLength="2000" style={{ resize: "none" }} onChange={inputChange} value={valueInput} className="form-control " id="form4Example3" cols={props.col} rows={props.row} placeholder={props.placeholder} name={props.name}></textarea>
     </div>
   );
 }
