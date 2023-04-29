@@ -1,0 +1,16 @@
+.text_nav{
+    color: #EDEDED!important;
+}
+
+.nav_blur {
+    /* The following two lines add a blur effect to the background of the element */
+    /* The -webkit prefix is used for Safari and other WebKit-based browsers */
+    -webkit-backdrop-filter: blur(8px)!important;
+    /* The backdrop-filter property is a newer standard that is being adopted by modern browsers */
+    backdrop-filter: blur(8px)!important;
+}
+
+.nav_bg {
+    background-color: rgba(30, 32, 34,0.8 )!important;
+}
+
