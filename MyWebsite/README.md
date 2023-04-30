@@ -1,6 +1,8 @@
 npm create vite@latest
 npm i
 npm install bootstrap
+npm install react-icons
+
 npm run dev
 
 {

@@ -1,4 +1,10 @@
 body {
-  background-color: #1E2022;
+  /* background-color: #1E2022; */
+
 }
 
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
