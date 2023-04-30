@@ -1,9 +1,10 @@
+import LinkCSS from "../Style/Link.module.css"
 function Link(props) {
   return (
     <>
-      <div className="col-md-2">
+      <div className= {`${LinkCSS.link} col-md-2`}>
         <h6 className="text-uppercase font-weight-bold">
-          <a href="#!" className="text-white">
+          <a href="#!" className="text-white text-decoration-none" >
             {props.name}
           </a>
         </h6>
@@ -11,5 +12,4 @@ function Link(props) {
     </>
   );
 }
-
 export default Link;

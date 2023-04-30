@@ -10,5 +10,4 @@ function CR() {
     </>
   );
 }
-
 export default CR;
