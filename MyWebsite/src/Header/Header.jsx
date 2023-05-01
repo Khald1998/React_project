@@ -1,4 +1,5 @@
-import HeaderCSS from "./Style/Header.module.css"
+import HeaderCSS from "../Style/Header.module.css"
+import Link from "./Link.jsx";
 function App() {
   return (
     <>
@@ -8,16 +9,9 @@ function App() {
             Brand
           </a>
           <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <a className={HeaderCSS.text_nav +" nav-link active "} aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className={HeaderCSS.text_nav +" nav-link"} href="#">
-                Link
-              </a>
-            </li>
+          <Link link="link1"/>
+          <Link link="link2"/>
+          <Link link="link3"/>
           </ul>
         </div>
       </nav>

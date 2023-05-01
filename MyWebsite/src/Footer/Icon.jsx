@@ -42,7 +42,7 @@ function Icon(props) {
     <>
       <a
         href={props.href}
-        className="text-white me-4"
+        className="text-white mx-3"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

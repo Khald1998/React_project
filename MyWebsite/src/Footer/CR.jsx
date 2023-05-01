@@ -2,9 +2,7 @@ function CR() {
   return (
     <>
       <div
-        className="text-center p-3"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-      >
+        className="text-center text-white p-3">
         © {new Date().getFullYear()} Khaled-Alzahrani.com
       </div>
     </>
