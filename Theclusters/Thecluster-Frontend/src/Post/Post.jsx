@@ -3,9 +3,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Alart from "./Alart";
 import Button from "./Button";
-// import Watch from "./Watch";
 import axios from "axios";
-import PostCSS from"./Post.module.css";
+import PostCSS from"../Style/Post.module.css";
 
 function Post() {
   const { id } = useParams();

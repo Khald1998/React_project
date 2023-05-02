@@ -1,9 +1,9 @@
-.navbar-brand {
+.navbar_brand {
   letter-spacing: 4px;
   color: #1abc9c !important;
 }
 
-.navbar-nav  li a:hover {
+a:hover {
   color: #1abc9c !important;
 }
 

@@ -7,7 +7,7 @@ const Request = require('./Request');
 const port = 8080;
 // const dbUrl = 'mongodb://127.0.0.1:27017/cluster';
 const dbUrl ='mongodb+srv://myapp:myapp123123@tcoc.ii33cir.mongodb.net/cluster';
-const deleteTime = 180;
+const deleteTime = 5;
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
@@ -87,7 +87,7 @@ cron.schedule('* * * * *', async () => {
     const currentDate = new Date();
     const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')} ${currentDate.getHours().toString().padStart(2, '0')}:${currentDate.getMinutes().toString().padStart(2, '0')}:${currentDate.getSeconds().toString().padStart(2, '0')}`;
 
-    console.log(`${formattedDate} Deleted ${result.deletedCount} record(s)`);
+    if (result.deletedCount!=0){console.log(`${formattedDate} Deleted ${result.deletedCount} record(s)`);}
   } catch (err) {
     console.error(err);
   }
