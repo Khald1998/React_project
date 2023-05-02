@@ -1,26 +1,17 @@
 const express = require("express");
 const mongoose = require('mongoose');
-const cors = require('cors');
-const cron = require('cron');
+const cron = require('node-cron');
 const Request = require('./Request');
 
-
-const corsOptions = {
-  origin: 'http://localhost:3000',
-  credentials: true,
-  optionSuccessStatus: 200
-};
 
 const port = 8080;
 // const dbUrl = 'mongodb://127.0.0.1:27017/cluster';
 const dbUrl ='mongodb+srv://myapp:myapp123123@tcoc.ii33cir.mongodb.net/cluster';
-
-const MINUTES_TO_KEEP_RECORDS = 180;
+const deleteTime = 180;
 
 const app = express();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(cors(corsOptions));
 
 mongoose.connect(dbUrl)
 .then(() => {
@@ -31,13 +22,8 @@ mongoose.connect(dbUrl)
 });
 
 app.get('/DataAll', async (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   try {
-    // Delete records older than X minutes ago
-    const date = new Date();
-    date.setMinutes(date.getMinutes() - MINUTES_TO_KEEP_RECORDS);
-    const result = await Request.deleteMany({ createdAt: { $lt: date } });
-    console.log(`Deleted ${result.deletedCount} record(s)`);
-
     // Retrieve all records
     const data = await Request.find({});
     if (data.length === 0) {
@@ -63,6 +49,7 @@ app.get('/DataAll', async (req, res, next) => {
 
 
 app.get("/Find/:id", async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   try {
     const data = await Request.findById(req.params.id);
     res.json(data);
@@ -74,6 +61,7 @@ app.get("/Find/:id", async (req, res) => {
 
 
 app.post('/DataAdd', async (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   try {
     const { name, phone, idea, cluster } = req.body;
     const newRequest = new Request({ name, phone, idea, cluster });
@@ -86,29 +74,24 @@ app.post('/DataAdd', async (req, res, next) => {
   }
 });
 
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-});
 
-// Schedule a job to delete old records from the database every X minute(s)
-const job = new cron.CronJob(`0 */${MINUTES_TO_KEEP_RECORDS} * * * *`, async () => {
+
+cron.schedule('* * * * *', async () => {
   try {
     // Calculate the date X minutes ago
     const date = new Date();
-    date.setMinutes(date.getMinutes() - MINUTES_TO_KEEP_RECORDS);
+    date.setMinutes(date.getMinutes() - deleteTime);
 
     // Delete records older than the calculated date
     const result = await Request.deleteMany({ createdAt: { $lt: date } });
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1).toString().padStart(2, '0')}-${currentDate.getDate().toString().padStart(2, '0')} ${currentDate.getHours().toString().padStart(2, '0')}:${currentDate.getMinutes().toString().padStart(2, '0')}:${currentDate.getSeconds().toString().padStart(2, '0')}`;
 
-    console.log(`Deleted ${result.deletedCount} record(s)`);
+    console.log(`${formattedDate} Deleted ${result.deletedCount} record(s)`);
   } catch (err) {
     console.error(err);
   }
 });
-
-// Start the job
-job.start();
 
 
 app.listen(port, () => {

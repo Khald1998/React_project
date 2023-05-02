@@ -1,43 +1,42 @@
 import React from 'react';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 
 const ContactUs = () => {
   return (
-    <Container className="py-5">
-      <Row>
-        <Col md={{ span: 6, offset: 3 }}>
+    <div className="container py-5">
+      <div className="row">
+        <div className="col-md-6 offset-md-3">
           <h1 className="text-center mb-4">Contact Us</h1>
-          <Form>
-            <Form.Group controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter name" />
-            </Form.Group>
+          <form>
+            <div className="form-group">
+              <label htmlFor="name">Name</label>
+              <input type="text" className="form-control" id="name" placeholder="Enter name" />
+            </div>
 
-            <Form.Group controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
-              <Form.Text className="text-muted">
+            <div className="form-group">
+              <label htmlFor="email">Email address</label>
+              <input type="email" className="form-control" id="email" placeholder="Enter email" />
+              <small className="form-text text-muted">
                 We'll never share your email with anyone else.
-              </Form.Text>
-            </Form.Group>
+              </small>
+            </div>
 
-            <Form.Group controlId="formBasicSubject">
-              <Form.Label>Subject</Form.Label>
-              <Form.Control type="text" placeholder="Enter subject" />
-            </Form.Group>
+            <div className="form-group">
+              <label htmlFor="subject">Subject</label>
+              <input type="text" className="form-control" id="subject" placeholder="Enter subject" />
+            </div>
 
-            <Form.Group controlId="formBasicMessage">
-              <Form.Label>Message</Form.Label>
-              <Form.Control as="textarea" rows={3} />
-            </Form.Group>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea className="form-control" id="message" rows={3} />
+            </div>
 
-            <Button variant="primary" type="submit">
+            <button type="submit" className="btn btn-primary">
               Submit
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -1,10 +1,9 @@
-import { Container, Row, Col } from "react-bootstrap";
 
 const AboutUs = () => {
   return (
-    <Container>
-      <Row>
-        <Col md={{ span: 8, offset: 2 }}>
+    <div className="Container">
+      <div className="Row">
+       <div className="col-md-8 offset-md-2">
           <h1>About Us</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat
@@ -33,9 +32,9 @@ const AboutUs = () => {
             turpis quis enim aliquam malesuada. Sed eu arcu non nisi sodales
             fringilla.
           </p>
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+    </div>
   );
 };
 
