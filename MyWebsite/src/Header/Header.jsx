@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <nav className={ `${HeaderCSS.nav_blur} ${HeaderCSS.nav_bg} ${isTop ? HeaderCSS.nav_bg_color : ""} navbar navbar-expand fixed-top`}>
+      <nav className={ `${HeaderCSS.nav_blur} ${HeaderCSS.nav_bg} ${isTop ? "" : HeaderCSS.nav_bg_color} navbar navbar-expand fixed-top`}>
         <div className="container-fluid">
           <a className={HeaderCSS.text_nav + " navbar-brand"} href="#">
             Brand
