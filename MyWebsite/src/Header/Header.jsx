@@ -30,9 +30,6 @@ function App() {
           </ul>
         </div>
       </nav>
-      <br />
-      <br />
-      <br />
     </>
   );
 }
