@@ -2,28 +2,6 @@
     color: #F0F5F9 !important;
 }
 
-/* .background_TL {
-    background-image: url('../assets/image.svg');
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: 20%;
-    height: 100%;
-    width: 100%;
-}
-.background_BR {
-    background-image: url('../assets/image.svg');
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    background-size: 20%;
-    height: 100%;
-    width: 100%;
-}
-.blur {
-    background: rgba(30, 32, 34, 0.2); 
-    backdrop-filter: blur(8px); 
-    height: 100%;
-
-} */
 
 
 .sec{

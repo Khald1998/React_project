@@ -8,7 +8,6 @@ import './Style/main.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='bg'></div>
     <App />
   </React.StrictMode>,
 )
