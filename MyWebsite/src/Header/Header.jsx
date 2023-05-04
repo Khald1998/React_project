@@ -18,6 +18,7 @@ function App() {
 
   return (
     <>
+    <section className="pb-5">
       <nav className={ `${HeaderCSS.nav_blur} ${HeaderCSS.nav_bg} ${isTop ? "" : HeaderCSS.nav_bg_color} navbar navbar-expand fixed-top`}>
         <div className="container-fluid">
           <a className={HeaderCSS.text_nav + " navbar-brand"} href="#">
@@ -30,6 +31,7 @@ function App() {
           </ul>
         </div>
       </nav>
+      </section>
     </>
   );
 }

@@ -1,6 +1,6 @@
 #root{
   background-color: rgba(30, 32, 34,1);
-  min-height: 100vh;
+  /* min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
 }

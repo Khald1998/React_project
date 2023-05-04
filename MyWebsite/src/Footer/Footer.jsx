@@ -6,7 +6,7 @@ import FooterCSS from "../Style/Footer.module.css"
 function Footer() {
   return (
     <footer 
-    className={`mt-auto ${FooterCSS.Footer_bg}`}>
+    className={`${FooterCSS.Footer_bg}`}>
       <div className="container">
         <Links />
         <hr className="my-5 text-white" />
