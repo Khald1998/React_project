@@ -1,4 +1,4 @@
- h1 {
+h1 {
     color: #F0F5F9 !important;
 }
 
@@ -24,10 +24,18 @@
     height: 100%;
 
 } */
+.bg{
+    position: relative;
+    background-image: url("../assets/image.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    filter: blur(8px); /* Adding blur background image */
 
+}
 
 .sec{
-    min-height: 400px!important;
-    width: 100% !important;
-    background-color: blueviolet !important;
+    /* min-height: 400px!important;
+    width: 100% !important; */
 }

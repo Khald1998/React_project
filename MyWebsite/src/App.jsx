@@ -1,5 +1,6 @@
 import Header from "./Header/Header.jsx";
 import Content from "./Content/Content.jsx";
+import More from "./More/More.jsx";
 import Footer from "./Footer/Footer.jsx";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <Content />
+      <More/>
       <Footer />
     </>
   );

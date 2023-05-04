@@ -2,7 +2,7 @@ import ContentCSS from "../Style/Content.module.css";
 function Content() {
   return (
     <>
-      <section className="text-center ">
+      <section className={`${ContentCSS.sec} text-center pt-5`}>
         <h1>xxx</h1><h1>xxx</h1><h1>xxx</h1><h1>xxx</h1>
       </section>
     </>
