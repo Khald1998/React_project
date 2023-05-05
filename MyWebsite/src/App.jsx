@@ -9,7 +9,7 @@ function App() {
       <Header />
       <Content />
       <More/>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
