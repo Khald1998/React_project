@@ -1,5 +1,5 @@
 import Header from "./Header/Header.jsx";
-import Content from "./Content/Content.jsx";
+import Content from "./Introduction/Introduction.jsx";
 import More from "./More/More.jsx";
 import Footer from "./Footer/Footer.jsx";
 
