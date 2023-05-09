@@ -1,0 +1,21 @@
+{
+  "name": "apigateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"node Server.js\" \"cd ../Microservices/Add && node Server.js\" \"cd ../Microservices/Delete && node Server.js\" \"cd ../Microservices/Find && node Server.js\" \"cd ../Microservices/View && node Server.js\"",
+    "dev": "concurrently \"nodemon Server.js\" \"cd ../Microservices/Add && nodemon Server.js\" \"cd ../Microservices/Delete && nodemon Server.js\" \"cd ../Microservices/Find && nodemon Server.js\" \"cd ../Microservices/View && nodemon Server.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
