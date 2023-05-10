@@ -5,8 +5,8 @@ const Request = require('./Request');
 
 
 const port = 8080;
-// const dbUrl = 'mongodb://127.0.0.1:27017/cluster';
-const dbUrl ='mongodb+srv://myapp:myapp123123@tcoc.ii33cir.mongodb.net/cluster';
+const dbUrl = 'mongodb://127.0.0.1:27017/cluster';
+// const dbUrl ='mongodb+srv://myapp:myapp123123@tcoc.ii33cir.mongodb.net/cluster';
 const deleteTime = 5;
 
 const app = express();
