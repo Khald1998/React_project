@@ -24,7 +24,7 @@ function Requests() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/DataAll")
+      .get("http://localhost:8080/View")
       .then((response) => {
         setData(response.data);
       })

@@ -24,6 +24,7 @@ app.post('/Add', (req, res) => {
 });
 
 app.get('/View', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
     request.get(VIEW, (error, response, body) => {
       if (error) {
         res.status(500).json({ error });

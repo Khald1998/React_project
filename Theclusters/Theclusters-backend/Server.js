@@ -5,8 +5,8 @@ const Request = require('./Request');
 
 
 const port = 8080;
-const dbUrl = 'mongodb://127.0.0.1:27017/cluster';
-// const dbUrl ='mongodb+srv://myapp:myapp123123@tcoc.ii33cir.mongodb.net/cluster';
+// const dbUrl = 'mongodb://127.0.0.1:27017/cluster';
+const dbUrl ='mongodb+srv://myapp:myapp123123@tcoc.ii33cir.mongodb.net/cluster';
 const deleteTime = 5;
 
 const app = express();
@@ -21,7 +21,7 @@ mongoose.connect(dbUrl)
   console.log("Error connecting to database", err);
 });
 
-app.get('/DataAll', async (req, res, next) => {
+app.get('/View', async (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   try {
     // Retrieve all records
@@ -60,7 +60,7 @@ app.get("/Find/:id", async (req, res) => {
 });
 
 
-app.post('/DataAdd', async (req, res, next) => {
+app.post('/Add', async (req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   try {
     const { name, phone, idea, cluster } = req.body;
