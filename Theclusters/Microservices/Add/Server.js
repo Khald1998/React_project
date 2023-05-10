@@ -20,7 +20,6 @@ mongoose.connect(dbUrl)
 
 
 app.post('/Add', async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
   try {
     const { name, phone, idea, cluster } = req.body;
     const newRequest = new MySchema({ name, phone, idea, cluster });
@@ -28,7 +27,7 @@ app.post('/Add', async (req, res) => {
     console.log(`${name} was added!`);
     res.redirect(`${url}/Requests`);
   } catch (err) {
-    console.log(err);
+    console.log('error.code : '+error.code);
     res.status(500).send("Internal Server Error");
   }
 });

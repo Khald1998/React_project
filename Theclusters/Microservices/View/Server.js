@@ -16,11 +16,11 @@ mongoose.connect(dbUrl)
 
 
 app.get('/View', async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // res.setHeader('Access-Control-Allow-Origin', '*');
   try {
     const data = await MySchema.find({});
     if (data.length === 0) {
-      res.status(404).send("No Request Found");
+      res.status(404).json("No Request Found");
     } else {
       const results = data.map(({ _id, name, phone, idea, cluster ,createdAt}) => ({
         _id
@@ -30,7 +30,7 @@ app.get('/View', async (req, res) => {
         ,cluster
         ,createdAt
       }));
-      res.send(results);
+      res.status(200).json(results);
     }
   } catch (err) {
     console.error(err);

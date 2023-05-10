@@ -10,6 +10,7 @@ const ADD = process.env.ADD ||"http://localhost:7001/Add";
 const FIND = process.env.FIND ||"http://localhost:7003/Find";
 const VIEW = process.env.VIEW ||"http://localhost:7002/View";
 console.log(test);
+
 app.post('/Add', (req, res) => {
   const { name, phone, idea, cluster } = req.body;
   request.post(ADD, {
@@ -24,12 +25,16 @@ app.post('/Add', (req, res) => {
 });
 
 app.get('/View', (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // res.setHeader('Access-Control-Allow-Origin', '*');
     request.get(VIEW, (error, response, body) => {
-      if (error) {
-        res.status(500).json({ error });
+      
+      if (response.statusCode==200) {
+        const data = JSON.parse(body);
+        res.status(200).json(data);
+
       } else {
-        res.json(JSON.parse(body));
+        const data = JSON.parse(body);
+        res.status(404).json(data);
       }
     });
 });

@@ -31,7 +31,7 @@ function Compose() {
   return (
     <>
       <Alart text="Requeses will be deleted after 2 days." className="mt-5" />
-      <form action="http://localhost:8080/Add" method="post">
+      <form action="http://localhost:7001/Add" method="post">
         <div className="container my-5">
           <Input
             placeholder="Your Name"

@@ -61,7 +61,7 @@ app.get("/Find/:id", async (req, res) => {
 
 
 app.post('/Add', async (req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  // res.setHeader('Access-Control-Allow-Origin', '*');
   try {
     const { name, phone, idea, cluster } = req.body;
     const newRequest = new Request({ name, phone, idea, cluster });

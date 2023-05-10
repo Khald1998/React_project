@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const RequestSchema = new mongoose.Schema({
-  name: String,
-  phone: Number,
-  idea: String,
+  name: { type: String, required: true },
+  phone: { type: Number,required: true, unique: true },
+  idea: { type: String, required: true },
   cluster: Number,
   createdAt: {
     type: Date,

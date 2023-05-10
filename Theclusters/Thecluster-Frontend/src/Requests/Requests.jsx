@@ -30,6 +30,7 @@ function Requests() {
       })
       .catch((error) => {
         if (error.response.status !== 200) {
+
           setIsError(true);
         } else {
           setIsError(false);
