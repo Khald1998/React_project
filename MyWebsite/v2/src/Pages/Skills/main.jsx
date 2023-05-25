@@ -1,7 +1,9 @@
+import Headline from "./Headline";
 function main() {
   return (
     <>
-      <section className="bg-orange-600 h-screen w-full">
+      <section className="bg-secondary h-screen w-full">
+        <Headline/>
       </section>
     </>
   );

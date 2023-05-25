@@ -9,7 +9,7 @@ function App() {
       <Introduction/>
       <About/>
       <Skills/>
-      {/* <div className='h-screen w-full bg-red-500'></div> */}
+      
     </>
   )
 }

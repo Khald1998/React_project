@@ -14,8 +14,9 @@ export default {
         'negative': '-10',
        },
       colors:{
+        'whitey': '#EDEDED',
         'secondary': '#171717',
-        'prime': '#DA0037',
+        'prime': '#1E2022',
       },
     },
   },
