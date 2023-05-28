@@ -6,10 +6,10 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Introduction/>
+      {/* <Header/> */}
+      {/* <Introduction/> */}
       <About/>
-      <Skills/>
+      {/* <Skills/> */}
       
     </>
   )
