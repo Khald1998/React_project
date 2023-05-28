@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      screens:{
+        'xxs': '300px',
+        'xs': '420px',
+      },
       backgroundImage: {
         'img-pattern': "url('/src/assets/future-grid.webp')",
         'img-me': "url('/src/assets/Me.JPG')",

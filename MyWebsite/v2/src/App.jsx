@@ -7,9 +7,9 @@ function App() {
   return (
     <>
       {/* <Header/> */}
-      {/* <Introduction/> */}
+      <Introduction/>
       <About/>
-      {/* <Skills/> */}
+      <Skills/>
       
     </>
   )

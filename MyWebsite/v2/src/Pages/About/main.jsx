@@ -4,7 +4,9 @@ import Right from "./Right";
 function main() {
   return (
     <>
-      <section className="bg-second h-screen w-full grid grid-raws-2 lg:grid-cols-2">
+      <section className="bg-second grid grid-raws-2 
+      md:grid-cols-12 
+      lg:grid-cols-12">
       <Left/>
       <Right/>
       </section>
