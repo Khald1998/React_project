@@ -1,4 +1,4 @@
-function Headline() {
+function SkillsHeadline() {
     return (
       <>
         <div className="h-1/5 w-full bg-whitey text-center pt-14">
@@ -9,5 +9,5 @@ function Headline() {
     );
   }
   
-  export default Headline;
+  export default SkillsHeadline;
   

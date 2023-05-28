@@ -8,15 +8,15 @@ export default {
     extend: {
       backgroundImage: {
         'img-pattern': "url('/src/assets/future-grid.webp')",
-        'img-me': "url('/src/assets/Me_2.JPG')",
+        'img-me': "url('/src/assets/Me.JPG')",
       },
       zIndex: {
         'negative': '-10',
        },
       colors:{
         'whitey': '#EDEDED',
-        'secondary': '#171717',
-        'prime': '#1E2022',
+        'second': '#171717',
+        'prime': '#52616B',
       },
     },
   },

@@ -1,4 +1,4 @@
-function Headline() {
+function Info() {
     return (
       <>
       <div className="mx-auto w-10/12 2xl:w-[80%]">
@@ -8,5 +8,5 @@ function Headline() {
     );
   }
   
-  export default Headline;
+  export default Info;
   
