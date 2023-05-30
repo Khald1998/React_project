@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
-function Info() {
+function Main() {
   const buzzword = [
     "Developer",
     "Designer",
@@ -67,26 +67,9 @@ function Info() {
 
   return (
     <>
-      <div className="mx-auto h-1/6 w-10/12 flex flex-col justify-start items-start ">
-        <div className="h-[40%]">
-          <h1 className=" font-bold text-whitey uppercase mb-4 ">About</h1>
-        </div>
-        <div className="inline-block min-w-full min-h-[60%] ">
-          <h3 className="font-bold text-5xl mb-8  text-whitey font-display">
-            {displayedBuzzword}
-          </h3>
-        </div>
-        <div>
-          <p className="leading-relaxed text-whitey">
-            I'm Khaled Alzahrani, A highly motivated student who is looking for
-            an internship opportunity in the cloud and computer engineering
-            field to improve his social and engineering skills and fulfill his
-            ambitions.
-          </p>
-        </div>
-      </div>
+      <h3 className="text-whitey">{displayedBuzzword}</h3>
     </>
   );
 }
 
-export default Info;
+export default Main;
