@@ -5,6 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily:{
+      display:["Roboto","sans-serif"],
+      second:['Source Sans Pro', 'sans-serif'
+    ],
+    },
     extend: {
       screens:{
         'xxs': '300px',

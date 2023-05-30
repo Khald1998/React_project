@@ -9,7 +9,7 @@ function Right() {
         sm:h-[65vh]
         md:h-[70vh] md:col-span-7
         lg:h-[70vh] lg:col-span-7 
-        xl:h-[100vh]  
+        xl:h-[100vh] xl:col-span-6  
         " >
           <Info/>
         </div>

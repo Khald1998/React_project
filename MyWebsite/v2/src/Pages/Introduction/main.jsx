@@ -1,4 +1,4 @@
-import Headline from "./headline";
+import Headline from "./Headline";
 function main() {
   return (
     <>

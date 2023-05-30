@@ -15,6 +15,7 @@ import { MdCss } from "react-icons/md";
 import { DiMongodb } from "react-icons/di";
 import { GiLogicGateAnd } from "react-icons/gi";
 import React, { useState, useEffect } from "react";
+import Button from "./Button";
 
 const skills = [
   { icon: <FaReact />, text: "React" },
@@ -87,21 +88,14 @@ function SkillsArea() {
   };
 
   return (
-    <div className="text-whitey mx-auto h-1/2 w-11/12 flex flex-wrap flex-row gap-x-8 mt-24">
-      {skills.slice(0, displayedSkills).map((skill) => (
-        <Skill key={skill.text} icon={skill.icon} text={skill.text} />
-      ))}
-      {!loadedAll && (
-        <div className="w-full text-center">
-        <button
-          onClick={loadMoreSkills}
-          className="bg-inherit hover:bg-whitey text-whitey hover:bg-inherit font-bold py-2 px-4 mt-4 border-2"
-        >
-          Load More
-        </button>
-        </div>
-      )}
-    </div>
+    <>
+      <div className="text-whitey mx-auto h-1/2 w-10/12 flex flex-wrap flex-row gap-x-8 mt-24">
+        {skills.slice(0, displayedSkills).map((skill) => (
+          <Skill key={skill.text} icon={skill.icon} text={skill.text} />
+        ))}
+      </div>
+      {!loadedAll && <Button onClick={loadMoreSkills} />}
+    </>
   );
 }
 
