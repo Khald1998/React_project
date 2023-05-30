@@ -3,7 +3,7 @@ import SkillsArea from "./SkillsArea";
 function main() {
   return (
     <>
-      <section className="bg-second w-full
+      <section className="bg-second w-full relative
       xxs:pb-28 
       xs:pb-28 
       sm:pb-28 
@@ -13,6 +13,7 @@ function main() {
       ">
         <SkillsHeadline/>
         <SkillsArea/>
+        <hr class="h-px w-2/6 bg-white-200 border-1 absolute mx-auto left-0 right-0 bottom-0 opacity-40"/>
       </section>
     </>
   );

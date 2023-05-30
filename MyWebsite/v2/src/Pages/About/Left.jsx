@@ -15,10 +15,10 @@ function Left() {
       </div> */}
       <div
         className="w-full bg-inherit flex justify-center items-center
-      max-xxs:h-[65vh] 
-      xxs:h-[75vh] 
-      xs:h-[95vh]  
-      sm:h-[100vh]  
+      max-xxs:h-[50vh] 
+      xxs:h-[50vh] 
+      xs:h-[60vh]  
+      sm:h-[70vh]  
       md:h-[70vh] md:col-span-5
       lg:h-[70vh] lg:col-span-5
       xl:h-screen xl:col-span-6"
@@ -26,7 +26,7 @@ function Left() {
         <div
           className="aspect-square flex justify-center items-center relative
           xxs:w-8/12
-          xs:w-8/12
+          xs:w-7/12
           sm:w-7/12
           md:w-9/12
           lg:w-9/12
