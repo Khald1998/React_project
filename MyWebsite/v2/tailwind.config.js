@@ -24,7 +24,9 @@ export default {
        },
       colors:{
         'whitey': '#EDEDED',
-        'second': '#171717',
+        'second': '#1E2022',
+        'nav': 'rgba(23, 23, 23,0.4 )',
+        'footer':'#171717',
         'prime': '#52616B',
       },
     },

@@ -1,35 +1,26 @@
+import { useEffect, useState } from "react";
+import Link from "./Links";
+import Brand from "./Brand";
 function App() {
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollTop = window.pageYOffset;
+      if (scrollTop === 0) {
+        setIsTop(true);
+      } else {
+        setIsTop(false);
+      }
+    });
+  }, []);
+
   return (
     <>
-      <section className="">
-        <nav class="flex items-center justify-between flex-wrap bg-transparent px-6 py-3 absolute">
-          <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <span class="font-semibold text-xl tracking-tight">
-              Tailwind CSS
-            </span>
-          </div>
-          <div class=" flex-grow flex items-center w-auto">
-            <div class="text-sm flex-grow">
-              <a
-                href="#responsive-header"
-                class=" inline-block mt-0 text-teal-200 hover:text-white mr-4"
-              >
-                Docs
-              </a>
-              <a
-                href="#responsive-header"
-                class="inline-block mt-0 text-teal-200 hover:text-white mr-4"
-              >
-                Examples
-              </a>
-              <a
-                href="#responsive-header"
-                class="inline-block mt-0 text-teal-200 hover:text-white"
-              >
-                Blog
-              </a>
-            </div>
-          </div>
+      <section className={`w-full px-6 py-3 fixed text-whitey transition-all duration-500 z-50 ${isTop ? "" : "bg-nav backdrop-blur"} `}>
+        <nav className="flex items-center justify-between">
+          <Brand text="Brand"/>
+          <Link />
         </nav>
       </section>
     </>

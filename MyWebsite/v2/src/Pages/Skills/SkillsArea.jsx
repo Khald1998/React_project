@@ -54,7 +54,6 @@ function SkillsArea() {
     const handleWindowResize = () => {
       setScreenSize(window.innerWidth);
     };
-    console.log("screenSize: " + screenSize);
     window.addEventListener("resize", handleWindowResize);
 
     return () => {
@@ -79,7 +78,6 @@ function SkillsArea() {
       setDisplayedSkills(skills.length);
       setLoadedAll(true);
     }
-    console.log("displayedSkills: " + displayedSkills);
   }, [screenSize]);
 
   const loadMoreSkills = () => {
