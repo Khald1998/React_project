@@ -2,7 +2,9 @@ function main() {
   return (
     <>
       <div className="bg-second h-screen w-full flex justify-center items-center">
-        <div className="max-w-sm border border-gray-200 rounded-lg shadow bg-second flex flex-col justify-center items-center">
+        <div className="max-w-sm border border-gray-200 rounded-lg shadow bg-second flex flex-col justify-center items-center
+        max-md:w-3/4
+        ">
           <div className="bg-whitey h-3/4 w-3/4 rounded flex justify-center items-center py-5 my-5">
             <img className="rounded-t-lg w-3/4 h-3/4" src="src\assets\KFUPM.png" alt="" />
           </div>

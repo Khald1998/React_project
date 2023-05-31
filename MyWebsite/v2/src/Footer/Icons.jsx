@@ -2,8 +2,10 @@ import Icon from "./Icon.jsx";
 function Icons() {
   return (
     <>
-      <section className="my-10 text-center flex flex-row justify-center items-center 
-      
+      <section className="text-center flex flex-row justify-center items-center 
+      max-md:my-5
+      md:my-10
+
       ">
         <Icon name="Github" href = "https://github.com/Khald1998" />
         <Icon name="Whatsapp" href = "https://api.whatsapp.com/send?phone=966580599359" />
