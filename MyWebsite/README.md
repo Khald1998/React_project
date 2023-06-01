@@ -1,27 +1,19 @@
-npm create vite@latest
-npm i
-npm install bootstrap
-npm install react-icons
+## README.md
 
-npm run dev
+### How to Run
 
-{
-171717
+To run this project, follow the steps below:
 
-444444
+1. Install the required dependencies by running the command: `npm i`.
+2. Start the development server by running the command: `npm run dev`.
 
-00ADB5
+### Colors Used
 
-EDEDED
-}
+The following color palettes were used in this project:
 
-{
-1E2022
+1. [Color Palette 1](https://colorhunt.co/palette/222831393e4600adb5eeeeee)
+2. [Color Palette 2](https://colorhunt.co/palette/f0f5f9c9d6df52616b1e2022)
+3. [Color Palette 3](https://colorhunt.co/palette/232931393e464ecca3eeeeee)
+4. [Color Palette 4](https://colorhunt.co/palette/171717444444da0037ededed)
 
-52616B
-
-C9D6DF
-
-F0F5F9
-}
-
+Feel free to explore these color palettes for inspiration or reference.
