@@ -6,6 +6,7 @@ function Cards() {
         className="mb-16 max-w-sm border  border-gray-200 rounded-lg shadow bg-second flex flex-col justify-center items-center
           h-2/4 w-auto
           xxs:h-2/4 xxs:w-3/4
+          text-whitey
           "
       >
         <div className=" rounded flex justify-center items-center h-2/4 w-auto">
@@ -17,7 +18,7 @@ function Cards() {
         </div>
         <div className="p-5">
           <a href="#">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center
+            <h5 className="mb-2 text-2xl font-bold tracking-tight  text-center
             xxs:text-lg
             xs:text-xl
             sm:text-2xl
@@ -25,7 +26,7 @@ function Cards() {
               KFUPM
             </h5>
           </a>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center
+          <p className="mb-3 font-normal  text-center
           xxs:text-sm
           xs:text-base
           sm:text-lg
