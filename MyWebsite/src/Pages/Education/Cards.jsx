@@ -10,9 +10,9 @@ function Cards() {
           text-whitey
           "
       >
-        <div className=" rounded flex justify-center items-center h-2/4 w-auto">
+        <div className=" rounded-lg flex justify-center items-center h-2/4 w-auto">
           <img
-            className="rounded-t-lg h-3/4 w-auto bg-whitey"
+            className="rounded-lg h-3/4 w-auto bg-whitey"
             src={KFUPM}
             alt=""
           />
