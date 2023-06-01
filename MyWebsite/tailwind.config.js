@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    dropShadow: {
+      'holy': '0 0 25px #fff',
+    },
     fontFamily:{
       display:["Roboto","sans-serif"],
       second:['Source Sans Pro', 'sans-serif'],

@@ -9,9 +9,9 @@ function Links() {
         max-md:flex-col
         ">
           <Link name="About" link="#About" />
-          <Link name="Work" link="#About"/>
-          <Link name="Contact me" link="#About"/>
-          <Link name="Source Code" link="#About"/>
+          <Link name="Work" link="https://github.com/Khald1998"/>
+          <Link name="Contact me" link="https://api.whatsapp.com/send?phone=966580599359"/>
+          <Link name="Source Code" link="https://github.com/Khald1998/React_project/tree/main/MyWebsite"/>
         </div>
       </section>
     </>

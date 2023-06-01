@@ -9,11 +9,13 @@ import { useEffect } from 'react'
 function App() {
   useEffect(()  => {
     document.body.classList.add('bg-prime');
-
+    document.documentElement.classList.add('scroll-smooth');
     return () => {
         document.body.classList.remove('bg-prime');
+        document.documentElement.classList.remove('scroll-smooth');
     };
-});
+  }, []); // Don't forget to add an empty dependencies array so this effect runs only once!
+
 
   return (
     <>
