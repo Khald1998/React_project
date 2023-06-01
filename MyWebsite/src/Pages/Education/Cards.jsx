@@ -1,3 +1,4 @@
+import KFUPM from '../../assets/KFUPM.png'
 function Cards() {
   return (
     <>
@@ -12,7 +13,7 @@ function Cards() {
         <div className=" rounded flex justify-center items-center h-2/4 w-auto">
           <img
             className="rounded-t-lg h-3/4 w-auto bg-whitey"
-            src={`${"/src/assets/KFUPM.png"||"/assets/KFUPM.png"}`}
+            src={KFUPM}
             alt=""
           />
         </div>
