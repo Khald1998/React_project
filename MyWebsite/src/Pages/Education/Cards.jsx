@@ -12,7 +12,7 @@ function Cards() {
         <div className=" rounded flex justify-center items-center h-2/4 w-auto">
           <img
             className="rounded-t-lg h-3/4 w-auto bg-whitey"
-            src="/src/assets/KFUPM.png"
+            src={`${"/src/assets/KFUPM.png"||"/assets/KFUPM.png"}`}
             alt=""
           />
         </div>

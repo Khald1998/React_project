@@ -139,38 +139,10 @@ function Info() {
           </div>
           <div className="lg:w-5/6 xxs:min-h-fit">
             <p className="leading-relaxed text-white xxs:text-sm xxs:h-full md:text-base">
-              I'm <span className="text-tertiary">Khaled Alzahrani</span>, a{" "}
-              <span className="text-tertiary">highly motivated</span> student
-              seeking an internship in the{" "}
-              <span className="text-tertiary">cloud</span> and{" "}
-              <span className="text-tertiary">computer engineering</span> field.
-              With a strong background in{" "}
-              <span className="text-tertiary">computer engineering</span>
-              <span className={`${!loadedAll ? "sm:hidden" : ""}`}>...</span>
+              I'm <span className="text-tertiary"> Khaled Alzahrani</span>, a<span className="text-tertiary"> highly motivated</span> student seeking an internship in the <span className="text-tertiary"> cloud</span> and<span className="text-tertiary"> computer engineering</span> field. With a strong background in<span className="text-tertiary"> computer engineering</span>
+              <span className={`${!loadedAll ? "" : "hidden"}`}>...</span>
               <span className={`${!loadedAll ? "max-sm:hidden" : ""}`}>
-                , including experience in{" "}
-                <span className="text-tertiary">embedded systems</span> and{" "}
-                <span className="text-tertiary">web development</span>, I am
-                eager to enhance my{" "}
-                <span className="text-tertiary">social</span> and{" "}
-                <span className="text-tertiary">engineering skills</span> while
-                pursuing my ambitions. I possess a{" "}
-                <span className="text-tertiary">proactive mindset</span>,
-                excellent
-                <span className="text-tertiary">problem-solving abilities</span>
-                , and a passion for staying up-to-date with the{" "}
-                <span className="text-tertiary">latest technologies</span>. I
-                thrive in{" "}
-                <span className="text-tertiary">
-                  collaborative environments
-                </span>{" "}
-                and am driven to contribute to the advancement of the industry.
-                With a strong <span className="text-tertiary">work ethic</span>{" "}
-                and a commitment to
-                <span className="text-tertiary">continuous growth</span>, I am
-                confident in my ability to make a valuable contribution as an{" "}
-                <span className="text-tertiary">intern</span>.
-              </span>
+                , including experience in<span className="text-tertiary"> embedded systems</span> and<span className="text-tertiary"> web development</span>, I ameager to enhance my <span className="text-tertiary"> social</span> and <span className="text-tertiary"> engineering skills</span> while pursuing my ambitions. I possess a <span className="text-tertiary"> proactive mindset</span>, excellent<span className="text-tertiary"> problem-solving abilities</span>, and a passion for staying up-to-date with the <span className="text-tertiary"> latest technologies</span>. Ithrive in<span className="text-tertiary"> collaborative environments </span>and am driven to contribute to the advancement of the industry. With a strong <span className="text-tertiary"> work ethic </span>and a commitment to <span className="text-tertiary"> continuous growth</span>, I am confident in my ability to make a valuable contribution as an <span className="text-tertiary"> intern</span>.</span>
             </p>
           </div>
           {!loadedAll && <Button onClick={loadMoreSkills} />}
