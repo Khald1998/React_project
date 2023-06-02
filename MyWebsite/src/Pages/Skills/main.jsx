@@ -9,7 +9,7 @@ function main() {
       sm:pb-28 
       md:pb-28 
       lg:pb-28
-      xl:h-[100svh] 
+      xl:h-[100dvh] 
       ">
         <SkillsHeadline/>
         <SkillsArea/>
