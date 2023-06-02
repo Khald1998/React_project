@@ -12,6 +12,7 @@ export default {
       display:["Roboto","sans-serif"],
       second:['Source Sans Pro', 'sans-serif'],
       dynamic: ['Roboto Mono', 'monospace'],
+      front:['Rajdhani', 'sans-serif'],
     },
     extend: {
       
