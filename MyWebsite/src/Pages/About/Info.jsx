@@ -112,9 +112,9 @@ function Info() {
       <div className={`bg-inherit flex justify-center mx-auto 
       xxs:h-fit xxs:w-5/6 xxs:items-start
       xs:w-4/6
-      ${!loadedAll?"sm:h-[50vh]":"sm:h-fit"}
-      md:col-span-7 md:items-center md:h-[70vh] md:w-11/12 md:ml-0
-      xl:h-screen xl:col-span-6 
+      ${!loadedAll?"sm:h-[50svh]":"sm:h-fit"}
+      md:col-span-7 md:items-center md:h-[70svh] md:w-11/12 md:ml-0
+      xl:h-[100svh] xl:col-span-6 
 
       
       `}>

@@ -9,7 +9,7 @@ function main() {
       sm:pb-28 
       md:pb-28 
       lg:pb-28
-      xl:h-screen 
+      xl:h-[100svh] 
       ">
         <SkillsHeadline/>
         <SkillsArea/>
