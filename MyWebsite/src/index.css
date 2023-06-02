@@ -5,3 +5,6 @@
 ::selection {
     background: #4ECCA3;
 }
+body,html{
+    height: -webkit-fill-available;
+}

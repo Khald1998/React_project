@@ -6,12 +6,12 @@ function Left() {
   return (
     <>
       <div
-        className="w-full bg-inherit flex justify-center items-center h-[50dvh] 
-      xs:h-[60dvh]  
-      sm:h-[70dvh]  
-      md:h-[70dvh] md:col-span-5
-      lg:h-[70dvh] lg:col-span-5
-      xl:h-[100dvh] xl:col-span-6"
+        className="w-full bg-inherit flex justify-center items-center h-[50lvh] 
+      xs:h-[60lvh]  
+      sm:h-[70lvh]  
+      md:h-[70lvh] md:col-span-5
+      lg:h-[70lvh] lg:col-span-5
+      xl:h-[100lvh] xl:col-span-6"
       >
         <div
           className="aspect-square flex justify-center items-center relative
