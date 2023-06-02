@@ -1,8 +1,8 @@
 function Headline() {
     return (
       <>
-      <div className="mx-auto w-10/12 2xl:w-[80%]">
-         <h1 className="text-white font-bold text-5xl leading-tight md:text-7xl md:leading-tight lg:text-8xl lg:leading-tight text-center font-display">Programmer<br /> and Engineer </h1>
+      <div className="mx-auto w-10/12 2xl:w-[80%] ">
+         <h1 className="text-white font-bold text-5xl leading-tight md:text-7xl md:leading-tight lg:text-8xl lg:leading-tight text-center font-display ">Welcome<br /> To My Universe</h1>
       </div>
       </>
     );

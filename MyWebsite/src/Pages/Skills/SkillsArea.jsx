@@ -81,8 +81,8 @@ function SkillsArea() {
   }, [screenSize]);
 
   const loadMoreSkills = () => {
-    setDisplayedSkills(skills.length);
-    setLoadedAll(true);
+    setDisplayedSkills(loadedAll?4:skills.length);
+    setLoadedAll(!loadedAll);
   };
 
   return (
@@ -92,7 +92,15 @@ function SkillsArea() {
           <Skill key={skill.text} icon={skill.icon} text={skill.text} />
         ))}
       </div>
-      {!loadedAll && <Button onClick={loadMoreSkills} />}
+      <div
+        className="mx-auto w-full
+          xxs:my-8
+          sm:my-14
+          md:hidden
+          "
+      > 
+        <Button text={`${!loadedAll?"Load More":"Load Less"}`} onClick={loadMoreSkills}/>
+      </div>
     </>
   );
 }

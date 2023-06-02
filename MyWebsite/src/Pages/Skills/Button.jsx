@@ -1,12 +1,12 @@
 function Button(props) {
   return (
     <>
-      <div className="mx-auto w-6/12 text-center">
+      <div className="mx-auto w-6/12 text-center flex justify-center items-center">
         <button
           onClick={props.onClick}
-          className="bg-inherit hover:bg-whitey text-whitey hover:text-black py-2 px-4 mt-4 border-2 transition-all duration-500"
+          className="bg-inherit hover:bg-tertiary hover:border-tertiary text-whitey hover:text-second py-2 px-4 border-2 transition-all duration-500 max-w-[90%]"
         >
-          Load More
+          {props.text}
         </button>
       </div>
     </>

@@ -6,9 +6,7 @@ function Left() {
   return (
     <>
       <div
-        className="w-full bg-inherit flex justify-center items-center
-      max-xxs:h-[50vh] 
-      xxs:h-[50vh] 
+        className="w-full bg-inherit flex justify-center items-center h-[50vh] 
       xs:h-[60vh]  
       sm:h-[70vh]  
       md:h-[70vh] md:col-span-5
