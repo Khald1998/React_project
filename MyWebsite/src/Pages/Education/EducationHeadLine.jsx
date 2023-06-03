@@ -2,7 +2,7 @@ function EducationHeadLine() {
   return (
     <>
       <div className="text-whitey mx-auto w-full text-center h-1/4 ">
-        <h2 className="font-bold font-second
+        <h2 className=" font-second
         xxs:text-2xl
         xs:text-3xl
         sm:text-3xl 
