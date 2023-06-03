@@ -25,7 +25,7 @@ function App() {
       <About/>
       <Skills/>
       <Education/>
-      <Built/>
+      {/* <Built/> */}
       <Footer/>
     </>
   )
