@@ -5,19 +5,18 @@ function main() {
   return (
     <>
       <section className="h-[100lvh] w-full bg-second flex justify-center items-center">
-        <div className=" 
+        <div
+          className=" 
         xxs:h-5/6 xxs:w-5/6 xss:flex-col
         xs:w-11/12
         sm:w-10/12
         md:flex-row md:relative
-        lg:w-10/12
-        xl:w-[70%]  
-        
-        
-        ">
-            <BuiltHeadline/>
-            <Image/>
-            <Description/>
+        lg:w-9/12
+        xl:w-[70%]"
+        >
+          <BuiltHeadline />
+          <Image />
+          <Description />
         </div>
       </section>
     </>
