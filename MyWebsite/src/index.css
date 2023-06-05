@@ -8,3 +8,20 @@
 body,html{
     height: -webkit-fill-available;
 }
+
+
+.box-shadow-smoth{
+    @apply relative shadow-[inset_0_0_20px_10px_rgba(78,204,163,0.2)] bg-tertiary/[.04] transition-all duration-[600] ease-in-out opacity-100;
+}
+
+.box-shadow-smoth::after {
+    @apply content-[''] absolute top-0 left-0 right-0 bottom-0 rounded-md shadow-[0_0_20px_2px_rgba(0,0,0,0.4)] transition-all duration-[600] ease-in-out ;
+}
+
+.box-shadow-smoth:hover::after {
+    @apply opacity-100 ;
+}
+
+.box-shadow-smoth:hover {
+    @apply shadow-[inset_0_0_20px_10px_rgba(78,204,163,0)] bg-tertiary/[.0];
+}

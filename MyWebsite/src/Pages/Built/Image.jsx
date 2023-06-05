@@ -1,10 +1,18 @@
 function Image() {
   return (
     <>
-      <div className="h-3/4 w-3/4 absolute left-[5%] top-0 bottom-0 my-auto flex justify-start items-center
-      xxs:hidden
+      <div className=" absolute flex justify-center items-center
+      max-md:hidden
+      md:h-5/6 md:w-3/4
+      lg:justify-start lg:h-3/4
+      xl:h-5/6
       ">
-        <div className="bg-gray-500 h-3/4 w-3/4 rounded-md"></div>
+        <div className="bg-gray-500 rounded-md
+        md:h-[40%] md:w-9/12 md:mr-10
+        min-[850px]:h-[50%]
+        lg:h-[65%]
+        xl:h-[65%]
+        "></div>
       </div>
     </>
   );

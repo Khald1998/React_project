@@ -1,14 +1,24 @@
 import Image from "./image";
 import Description from "./Description";
+import BuiltHeadline from "./BuiltHeadline";
 function main() {
   return (
     <>
-      <section className="h-[100lvh] w-full bg-second flex justify-center items-center relative">
-        <div className="h-3/4 w-3/4 relative">
+      <section className="h-[100lvh] w-full bg-second flex justify-center items-center">
+        <div className=" 
+        xxs:h-5/6 xxs:w-5/6 xss:flex-col
+        xs:w-11/12
+        sm:w-10/12
+        md:flex-row md:relative
+        lg:w-10/12
+        xl:w-[70%]  
+        
+        
+        ">
+            <BuiltHeadline/>
             <Image/>
             <Description/>
         </div>
-        <hr className="h-px w-2/6 bg-white-200 border-1 absolute mx-auto left-0 right-0 bottom-0 opacity-40"/>
       </section>
     </>
   );
