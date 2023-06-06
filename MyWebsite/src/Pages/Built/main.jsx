@@ -11,7 +11,7 @@ function main() {
         xs:w-11/12
         sm:w-10/12
         md:flex-row md:relative
-        lg:w-9/12
+        lg:w-10/12
         xl:w-[70%]"
         >
           <BuiltHeadline />
