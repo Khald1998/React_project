@@ -43,3 +43,8 @@ body,html{
 .img-shadow-smoth:hover {
     @apply md:shadow-[inset_0_0_20px_10px_rgba(78,204,163,0)] md:bg-tertiary/[.0];
 }
+
+.h-this{
+    height:fit-content(100%);
+      
+}
