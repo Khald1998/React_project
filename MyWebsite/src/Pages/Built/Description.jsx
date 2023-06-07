@@ -1,101 +1,124 @@
 import { FiGithub } from "react-icons/fi";
-
+import { FiExternalLink } from "react-icons/fi";
 function Description() {
-    return (
-      <>
-              <div className="text-whitey  flex   
-              xxs:h-5/6 xxs:w-full xxs:items-start
-              xs:justify-center
-              min-[480px]:w-[85%] min-[480px]:mx-auto
+  return (
+    <>
+      <div
+        className="text-whitey flex justify-center items-center  
+              xxs:h-[88%] xxs:w-full
+              xs:w-[95%] xs:mx-auto
               sm:w-full
-              md:w-3/4 md:mr-0 md:items-center md:justify-end
+              md:justify-end 
               lg:h-3/4 
               xl:h-5/6 
-              " >
-                <div className=" rounded-md flex flex-col justify-center items-center  
-                xxs:h-fit xxs:w-full 
-                xs:h-[75%] xs:w-full
-                min-[480px]:h-[85%]
-                min-[480px]:w-full
-                sm:h-[70%]
-                md:z-10 md:h-5/6 md:w-[82%]
-                lg:w-[90%]
-                xl:w-4/6 xl:h-[65%]
+              "
+      >
+        <div
+          className=" rounded-md flex flex-col justify-center items-center  
+                xxs:h-fit xxs:w-full xxs:p-4
+                xs:w-full xs:p-6
+                sm:p-10
+                md:z-10 md:p-0 md:w-[82%] md:items-end md:pb-6
+                lg:w-[90%] lg:pb-0
+                xl:w-4/6 xl:h-full
                 box-shadow-smoth
                 
-                ">
-                <div className=" mx-auto
-                xxs:w-11/12 xxs:h-[8%] 
-                min-[480px]:w-10/12 min-[480px]:h-[7%]
-                md:h-[10%] md:w-7/12 md:mr-0
-                lg:w-10/12 lg:mr-0
-                xl:w-3/4 xl:mr-0
-                bg-red-500
-                ">
-                  <h1>Featured Project</h1>
-                </div>
-                <div className=" mx-auto 
-                xxs:w-11/12 xxs:h-[9%] 
-                min-[480px]:w-10/12 min-[480px]:h-[8%]
-                md:h-[12%] md:w-7/12 md:mr-0
-                lg:w-10/12 lg:mr-0
-                xl:w-3/4 xl:mr-0
-                bg-orange-500
-                ">
-                  <a href="">Spotify Profile</a>
-                </div>
-                <div className="bg-footer mx-auto
-                xxs:w-11/12 xxs:min-h-[51%] xxs:p-5 
-                min-[480px]:w-10/12 min-[480px]:h-[50%]
-                md:h-[35%] md:rounded-md md:mt-2 md:mr-0 md:w-11/12
-                min-[850px]:w-11/12 min-[850px]:mr-0
-                lg:w-full lg:mt-3
-                xl:w-full xl:h-[39%] xl:mt-0
-                ">
-                  <h1>A minimal,  Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm. A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.</h1>
-                </div>
-                <div className=" mx-auto
-                xxs:w-11/12 xxs:min-h-[12%]
-                min-[480px]:w-10/12 min-[480px]:h-[11%]
-                md:h-[12%] md:w-11/12 md:mr-0
-                lg:w-full lg:mr-0
-                xl:w-full xl:mr-0
-                bg-neutral-700
-                ">
-                  <ul className="list-none flex flex-row justify-evenly flex-wrap">
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item </p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                    <li className="mx-1"><p>item</p></li>
-                  </ul>
-
-                </div>
-                <div className=" mx-auto flex flex-row justify-start items-center
-                xxs:w-11/12 xxs:h-[10%]
-                min-[480px]:w-10/12 min-[480px]:h-[9%]
-                md:h-[12%] md:w-11/12 md:mr-0
-                lg:w-full lg:mr-0
-                xl:w-full xl:mr-0
-                bg-blue-500
-                ">
-                  <FiGithub className="w-auto h-5 m-2" />
-                </div>
-
-                </div>
+                "
+        >
+          <div
+            className="  flex justify-start items-center text-tertiary font-dynamic
+                xxs:w-full xxs:h-9 xxs:text-xs
+                xs:w-full 
+                sm:text-sm
+                md:justify-end md:w-[75%] 
+                lg:w-[70%] lg:text-base
+                xl:w-[60%] xl:h-[8%] 
                 
-              </div>
-      </>
-    );
-  }
-  
-  export default Description;
+                "
+          >
+            <h1>Featured Project</h1>
+          </div>
+          <div
+            className="flex justify-start items-center font-bold font-front
+                xxs:w-full xxs:h-fit xxs:text-xl
+                xs:w-full
+                sm:text-2xl
+                md:justify-end md:w-[75%] 
+                lg:w-[70%] lg:text-3xl lg:mb-2
+                xl:w-[60%] xl:h-[8%] 
+                
+                "
+          >
+            <a href="">Spotify Profile</a>
+          </div>
+          <div
+            className="
+                xxs:w-full xxs:h-fit xxs:py-4 xxs:text-sm  
+                xs:w-full 
+                sm:text-base
+                md:rounded-md md:justify-end md:text-sm md:text-end md:w-[75%] md:p-4 md:bg-footer
+                lg:w-[70%] lg:text-base 
+                xl:w-[75%] xl:max-h-[40%] 
+                "
+          >
+            <h1>
+              A minimal, Available on Visual Studio Marketplace,
+              Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm. A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, Atom Package Manager, and npm.
+            </h1>
+          </div>
+          <div
+            className="font-VS italic
+                xxs:w-full xxs:py-2 xxs:text-sm 
+                xs:w-full
+                md:w-[75%] 
+                lg:w-[70%]
+                xl:w-[60%] xl:h-[8%] 
+                
+                "
+          >
+            <ul
+              className="list-none flex flex-row justify-start flex-wrap gap-2 text-gray-400
+                  md:justify-end
+                  lg:text-lg
+                  "
+            >
+              <li className="">
+                <p>item</p>
+              </li>
+              <li className="">
+                <p>item </p>
+              </li>
+              <li className="">
+                <p>item</p>
+              </li>
+              <li className="">
+                <p>item</p>
+              </li>
+              <li className="">
+                <p>item</p>
+              </li>
+              <li className="">
+                <p>item</p>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="flex flex-row justify-start items-center
+                xxs:w-full xxs:h-8 xxs:py-5
+                xs:w-full
+                md:justify-end md:w-[75%] 
+                lg:w-[70%]
+                xl:w-[60%] xl:h-[8%] 
+                
+                "
+          >
+            <FiGithub className="w-auto h-5 m-2 lg:h-7" />
+            <FiExternalLink className="w-auto h-5 m-2 lg:h-7" />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Description;

@@ -2,8 +2,8 @@ function BuiltHeadline() {
   return (
     <>
       <div
-        className="text-whitey mx-auto w-full text-center
-      xxs:h-1/6
+        className="text-whitey mx-auto w-full text-center 
+      xxs:h-[12%]
       sm:w-full 
       md:w-4/6 
       lg:h-1/4 lg:w-full
@@ -14,7 +14,7 @@ function BuiltHeadline() {
             Some Things I’ve Built
           </h2>
         </div>
-        <div className="h-1/2"> 
+        <div className="h-1/2 flex justify-center items-center"> 
         <h3 className="text-base sm:text-lg md:text-xl ">
           Visit my GitHub for more details.
         </h3>

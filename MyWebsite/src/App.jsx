@@ -20,11 +20,11 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <Introduction/>
-      <About/>
-      <Skills/>
-      <Education/>
+      {/* <Header/> */}
+      {/* <Introduction/> */}
+      {/* <About/> */}
+      {/* <Skills/> */}
+      {/* <Education/> */}
       <Built/>
       <Footer/>
     </>

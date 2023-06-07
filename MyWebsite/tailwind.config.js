@@ -13,6 +13,7 @@ export default {
       second:['Source Sans Pro', 'sans-serif'],
       dynamic: ['Roboto Mono', 'monospace'],
       front:['Rajdhani', 'sans-serif'],
+      VS:['Source Code Pro', 'monospace']
     },
     extend: {
       

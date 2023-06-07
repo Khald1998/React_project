@@ -11,7 +11,7 @@ body,html{
 
 
 .box-shadow-smoth{
-    @apply max-md:relative max-md:shadow-[inset_0_0_20px_10px_rgba(78,204,163,0.2)] max-md:bg-tertiary/[.04] max-md:transition-all max-md:duration-[600] max-md:ease-in-out max-md:opacity-100;
+    @apply max-md:relative max-md:shadow-[inset_0_0_20px_10px_rgba(78,204,163,0.2)] max-md:bg-tertiary/[.05] max-md:transition-all max-md:duration-[600] max-md:ease-in-out max-md:opacity-100;
 }
 
 .box-shadow-smoth::after {
@@ -24,4 +24,22 @@ body,html{
 
 .box-shadow-smoth:hover {
     @apply max-md:shadow-[inset_0_0_20px_10px_rgba(78,204,163,0)] max-md:bg-tertiary/[.0];
+}
+
+
+
+.img-shadow-smoth{
+    @apply md:relative md:shadow-[inset_0_0_20px_10px_rgba(78,204,163,0.2)] md:bg-tertiary/[.05] md:transition-all md:duration-[600] md:ease-in-out md:opacity-100;
+}
+
+.img-shadow-smoth::after {
+    @apply md:content-[''] md:absolute md:top-0 md:left-0 md:right-0 md:bottom-0 md:rounded-md md:shadow-[0_0_20px_2px_rgba(0,0,0,0.4)] md:transition-all md:duration-[600] md:ease-in-out ;
+}
+
+.img-shadow-smoth:hover::after {
+    @apply md:opacity-100 ;
+}
+
+.img-shadow-smoth:hover {
+    @apply md:shadow-[inset_0_0_20px_10px_rgba(78,204,163,0)] md:bg-tertiary/[.0];
 }
