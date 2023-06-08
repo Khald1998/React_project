@@ -75,8 +75,8 @@ function Description() {
               )}
             </ul>
           </div>
-          <div className="flex flex-row justify-start items-center xxs:w-full xxs:h-8 xxs:py-5 md:justify-end md:w-[75%] lg:w-[70%] xl:w-[60%] xl:h-[8%]">
-            <a href={project.link} >
+          <div className="z-10 flex flex-row justify-start items-center xxs:w-full xxs:h-8 xxs:py-5 md:justify-end md:w-[75%] lg:w-[70%] xl:w-[60%] xl:h-[8%]">
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
               <FiGithub className="w-auto h-5 m-2 lg:h-7" />
             </a>
             <FiExternalLink className="w-auto h-5 m-2 lg:h-7 text-red-500" />
