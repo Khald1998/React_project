@@ -25,7 +25,7 @@ function Image() {
           <div className="absolute w-full h-full top-0 left-0 ">
             <img
               className={`absolute rounded-md transition-all duration-300 ease-in-out ${opacity} object-cover w-full h-full`}
-              src={`/${project.img}.jpg`}
+              src={`/${project.img}.png`}
             />
           </div>
           <div className="absolute img-shadow-smoth w-full h-full rounded-md top-0 left-0"></div>
