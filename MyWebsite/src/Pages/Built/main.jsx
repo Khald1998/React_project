@@ -1,4 +1,4 @@
-import Image from "./image";
+import Image from "./Image";
 import Description from "./Description";
 import BuiltHeadline from "./BuiltHeadline";
 function main() {
