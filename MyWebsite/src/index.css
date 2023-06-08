@@ -29,7 +29,7 @@ body,html{
 
 
 .img-shadow-smoth{
-    @apply md:relative md:shadow-[inset_0_0_20px_10px_rgba(78,204,163,0.2)] md:bg-tertiary/[.05] md:transition-all md:duration-[600] md:ease-in-out md:opacity-100;
+    @apply md:relative md:shadow-[inset_0_0_20px_10px_rgba(78,204,163,0.4)] md:bg-tertiary/[.4] md:transition-all md:duration-[600] md:ease-in-out md:opacity-100;
 }
 
 .img-shadow-smoth::after {

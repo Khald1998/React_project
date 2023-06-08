@@ -1,13 +1,15 @@
 const projects = [
     {
-      project_name: "Project 1",
+      project_name: "Weather on the go",
       project_description: "This is the description for Project 1.",
       project_tags: ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6"],
+      img:'test-1',
     },
     {
       project_name: "Project 2",
       project_description: "This is the description for Project 2.",
       project_tags: ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7", "tag8", "tag9"],
+      img:'test-2',
     },
     {
       project_name: "Project 3",
@@ -25,6 +27,7 @@ const projects = [
         "tag9",
         "tag10",
       ],
+      img:'test-3',
     },
   ];
   
