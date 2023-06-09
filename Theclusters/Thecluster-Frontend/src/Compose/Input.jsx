@@ -6,7 +6,7 @@ function Input(props) {
     setvalue(event.target.value);
   }
   const handleInput = (event) => {
-    event.target.value = event.target.value.replace(/[^0-9]/g, '');
+    event.target.value = event.target.value.replace(/[^0-9]/g, "");
   };
   return (
     <div className={`text-center my-3 mx-auto mw-50  ${props.className}`}>
@@ -23,12 +23,7 @@ function Input(props) {
         name={props.name}
         value={valueInpute}
         type="text"
-
-        onInput={props.num ? handleInput : undefined} 
-
-
-
-
+        onInput={props.num ? handleInput : undefined}
       />
     </div>
   );
