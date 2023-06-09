@@ -2,8 +2,8 @@ import Link from "./Link";
 function Links(props) {
   return (
     <>
-      <div className={` ${props.mode=='max'?"flex items-center px-5 text-lg":"grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm mt-5"}`}>
-        <Link text="Home" link="/" />
+      <div className={` ${props.ScreenMode=='big'?"flex items-center px-5 text-lg":"flex flex-col justify-start items-start text-start"}`}>
+        <Link text="Home" link="#Home" />
         <Link text="About me" link="#About"/>
         <Link text="Skills" link="#Skills"/>
         <Link text="Education" link="#Education"/>
