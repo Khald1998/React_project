@@ -1,22 +1,22 @@
 const express = require("express");
 const mongoose = require('mongoose');
 const MySchema = require('./MySchema');
+require('dotenv').config();
 const app = express();
 
 const port = process.env.PORT || 7003;
-const dbUrl = process.env.MONGODB_URL || 'mongodb+srv://myapp:myapp123123@tcoc.ii33cir.mongodb.net/cluster';//'mongodb://127.0.0.1:27017/cluster';
+const dbUrl = process.env.MONGODB_URL || 'mongodb://127.0.0.1:27017/cluster';
 
 mongoose.connect(dbUrl)
 .then(() => {
-  console.log("Connected to database");
+  console.log("Find's MS is connected to database");
   mongoose.set('debug', false);
 }).catch((err) => {
   console.log("Error connecting to database", err);
 });
 
 
-app.get("/Find/:id", async (req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
+app.get("/:id", async (req, res) => {
   try {
     const data = await MySchema.findById(req.params.id);
     res.json(data);

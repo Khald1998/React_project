@@ -13,7 +13,7 @@ function Card(props) {
       ? (window.location.href = urlW)
       : (window.location.href = urlR);
   };
-  const min = 180;
+  const min = 5;
   const [remainingTime, setRemainingTime] = useState(
     Math.max(
       0,
