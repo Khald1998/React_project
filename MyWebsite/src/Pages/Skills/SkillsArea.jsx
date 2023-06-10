@@ -15,7 +15,6 @@ import { MdCss } from "react-icons/md";
 import { DiMongodb } from "react-icons/di";
 import { GiLogicGateAnd } from "react-icons/gi";
 import React, { useState, useEffect } from "react";
-import Button from "./Button";
 
 const skills = [
   { icon: <FaReact />, text: "React" },
@@ -37,69 +36,16 @@ const skills = [
 ];
 
 function SkillsArea() {
-  const sizes = {
-    xxs: 300,
-    xs: 420,
-    sm: 640,
-    md: 768,
-    lg: 1024,
-    xl: 1280,
-  };
-
-  const [screenSize, setScreenSize] = useState(window.innerWidth);
-  const [displayedSkills, setDisplayedSkills] = useState(skills.length);
-  const [loadedAll, setLoadedAll] = useState(false);
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setScreenSize(window.innerWidth);
-    };
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (screenSize <= sizes.xxs) {
-      setDisplayedSkills(4);
-      setLoadedAll(false);
-    } else if (screenSize <= sizes.xs) {
-      setDisplayedSkills(6);
-      setLoadedAll(false);
-    } else if (screenSize <= sizes.sm) {
-      setDisplayedSkills(7);
-      setLoadedAll(false);
-    } else if (screenSize <= sizes.md) {
-      setDisplayedSkills(9);
-      setLoadedAll(false);
-    } else {
-      setDisplayedSkills(skills.length);
-      setLoadedAll(true);
-    }
-  }, [screenSize]);
-
-  const loadMoreSkills = () => {
-    setDisplayedSkills(loadedAll?4:skills.length);
-    setLoadedAll(!loadedAll);
-  };
 
   return (
     <>
-      <div className="text-whitey mx-auto h-1/2 w-10/12 flex flex-wrap flex-row gap-x-8 mt-24">
-        {skills.slice(0, displayedSkills).map((skill) => (
+      <div className="text-whitey mx-auto w-10/12 flex flex-wrap flex-row gap-x-8 gap-y-4 
+      max-md:absolute max-md:left-0 max-md:right-0
+      md:pb-24
+      ">
+        {skills.map((skill) => (
           <Skill key={skill.text} icon={skill.icon} text={skill.text} />
         ))}
-      </div>
-      <div
-        className="mx-auto w-full
-          xxs:my-8
-          sm:my-14
-          md:hidden
-          "
-      > 
-        <Button text={`${!loadedAll?"Load More":"Load Less"}`} onClick={loadMoreSkills}/>
       </div>
     </>
   );
