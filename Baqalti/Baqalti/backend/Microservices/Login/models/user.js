@@ -23,6 +23,10 @@ const UserSchema = new Schema({
   password: {
     type: String,
     required: true
+  },
+  adminPrivilege: {
+    type: Boolean,
+    required: true
   }
 
 });

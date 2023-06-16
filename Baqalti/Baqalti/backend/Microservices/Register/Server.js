@@ -21,15 +21,10 @@ app.post('', async (req, res) => {
   const { name, phone, email, username, password } = req.body;
   try {
     const hashedPassword = bcrypt.hashSync(password, 10);
-    const userDoc = await User.create({ name, phone, email, username, password: hashedPassword });
+    await User.create({ name, phone, email, username, password: hashedPassword, adminPrivilege:false });
     res.status(200).send({ message: 'You are registered' });
   } catch (err) {
-    console.error(err);
-    if (err.code === 11000) {
-      res.status(400).send({ message: 'Phone number or Email already exists' });
-    } else {
-      res.status(500).send({ message: 'Internal server error' });
-    }
+    res.status(err.code === 11000 ? 400 : 500).send({ message: err.code === 11000 ? 'Phone number or Email already exists' : 'Internal server error' });
   }
 });
   
