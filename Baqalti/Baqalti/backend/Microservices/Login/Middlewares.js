@@ -20,7 +20,7 @@ function verifyToken(req, res, next) {
     User.findById(userData.id)
       .then((docs) => {
         req.docs = docs;
-        res.json({ "used token":token, "message": "Login was successful by token" });
+        res.json({ "used token":token, "message": "Login was successful by token","admin":docs.adminPrivilege });
       })
       .catch((err) => {
         console.log(err);
@@ -68,7 +68,7 @@ function verifyPassword(req, res, next) {
         return res.status(401).json({ message: "Invalid Password" });
       }
 
-
+      req.adminPrivilege = docs.adminPrivilege;
       req.token = jwt.sign({ id: docs._id, email: docs.email }, jwtSecret, { expiresIn: 1800 });
       
       return next();
