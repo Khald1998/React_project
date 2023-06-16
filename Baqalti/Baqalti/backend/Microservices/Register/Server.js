@@ -7,8 +7,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(express.json());
-app.use(cors(
-));
+app.use(cors());
 
 const port = process.env.PORT || 7040;
 const dbUrl = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/Baqalti';

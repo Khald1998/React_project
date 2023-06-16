@@ -12,7 +12,7 @@ app.use(cors());
 
 const port = process.env.PORT || 7010;
 const dbUrl = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/Baqalti';
-const jwtSecret = process.env.SECRET;
+const jwtSecret = process.env.SECRET ;
 
 mongoose.connect(dbUrl)
     .then(() => console.log('LogIn is connected to MongoDB'))
@@ -20,9 +20,8 @@ mongoose.connect(dbUrl)
 
 
 
-app.post('',middleware.verifyEmail,middleware.verifyPassword, (req, res) => {
-    const token = jwt.sign({ id: req.docs._id, email: req.docs.email }, jwtSecret, { expiresIn: 1800 });
-    res.status(200).json({ "token":token, "message": "Login was successful" });
+app.post('',middleware.verifyToken, middleware.verifyStrings,middleware.verifyPassword,(req, res) => {
+    res.json({ "new token":req.token, "message": "Login was successful by email" });
 });
 
 
