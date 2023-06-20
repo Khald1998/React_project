@@ -54,7 +54,7 @@ app.post('/Logout', (req, res) => {
     if (error) {
       res.status(500).json({ "This is the error: ": error });
     } else {
-      res.clearCookie('token').json(JSON.parse(body));
+      res.json(JSON.parse(body));
     }
   });
 });

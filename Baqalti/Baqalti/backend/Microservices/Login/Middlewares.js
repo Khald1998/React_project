@@ -9,8 +9,7 @@ const jwtSecret = process.env.SECRET;
 function verifyToken(req, res, next) {
   const cookies = Object.keys(req.cookies).length !== 0; 
   const bearer = req.headers.authorization != null;
-  console.log('cookies: '+cookies)
-  console.log('bearer: '+bearer)
+
 let token;
 
 if (cookies && !bearer) {

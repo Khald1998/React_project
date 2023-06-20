@@ -7,6 +7,7 @@ const jwtSecret = process.env.SECRET;
 // Middleware function
 const verifyToken = (req, res, next) => {
     const { token } = req.cookies;
+    console.log(token)
     jwt.verify(token, jwtSecret, {}, (err, userData) => {
         if (err) {
             return res.status(401).json({ 'message': 'invalid Bearer token' });
