@@ -2,11 +2,13 @@ const express = require("express");
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const middleware = require('./Middlewares');
 require('dotenv').config();
 
 const app = express();
 app.use(express.json());
+app.use(cookieParser());
 app.use(cors());
 
 
@@ -20,7 +22,8 @@ mongoose.connect(dbUrl)
 
 
 app.post('',middleware.verifyToken, middleware.verifyStrings,middleware.verifyPassword,(req, res) => {
-    res.json({ "new token":req.token, "message": "Login was successful by email","admin":req.adminPrivilege  });
+    
+    res.cookie('token', req.token, { maxAge: 900000}).json({ "new token":req.token, "message": "Login was successful by email","admin":req.adminPrivilege  });
 });
 
 

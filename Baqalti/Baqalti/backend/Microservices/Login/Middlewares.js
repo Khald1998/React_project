@@ -1,15 +1,26 @@
 const User = require('./models/User.js');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+
 require('dotenv').config();
 
 const jwtSecret = process.env.SECRET;
 
-
 function verifyToken(req, res, next) {
-  if (!req.cookies == null) { var { token } = req.cookies; }
-  if (req.headers.authorization != null) { var token = req.headers.authorization.split(' ')[1]; }
-  
+  const cookies = Object.keys(req.cookies).length !== 0; 
+  const bearer = req.headers.authorization != null;
+  console.log('cookies: '+cookies)
+  console.log('bearer: '+bearer)
+let token;
+
+if (cookies && !bearer) {
+  token = req.cookies['token'];
+} else if (!cookies && bearer) {
+  token = req.headers.authorization.split(' ')[1];
+} else {
+  token = null;
+}
+
   if (!token) {
     return next();
   }
@@ -20,21 +31,13 @@ function verifyToken(req, res, next) {
     User.findById(userData.id)
       .then((docs) => {
         req.docs = docs;
-        res.json({ "used token":token, "message": "Login was successful by token","admin":docs.adminPrivilege });
+        res.cookie('token', token, { maxAge: 900000 }).json({ "used token": token, "message": "Login was successful by token", "admin": docs.adminPrivilege });
       })
       .catch((err) => {
         console.log(err);
         res.status(401).json({ message: "An error occurred" });
       });
   })
-
-
-
-
-
-
-
-
 
 }
 
@@ -45,11 +48,10 @@ function verifyStrings(req, res, next) {
   if (!email || !password) {
     return res.status(400).json({ message: "Email and password are required" });
   }
-  
+
   req.email = email;
   req.password = password;
   next();
-
 
 }
 
@@ -70,7 +72,7 @@ function verifyPassword(req, res, next) {
 
       req.adminPrivilege = docs.adminPrivilege;
       req.token = jwt.sign({ id: docs._id, email: docs.email }, jwtSecret, { expiresIn: 1800 });
-      
+
       return next();
 
     })
