@@ -62,6 +62,20 @@ app.post('/Profile', (req, res) => {
 });
 
 
+
+app.post('/Add', (req, res) => {
+  const { token } = req.cookies;
+  const { name, cost, quantity } = req.body;
+  const options = {  json: {token, name, cost, quantity } };
+  request.post(AddProducts, options, (error, response, body) => {
+    if (response.statusCode != 200) {
+      res.status(response.statusCode).json(body);
+    } else {
+      res.send(body);
+    }
+  });
+});
+
 // app.post('/Add',middleware.AddRequiredFields,middleware.AddFieldType,middleware.verifyTokenExisting, (req, res) => {
 //   const token = req.token;
 //   const { name, cost, quantity } = req.body;

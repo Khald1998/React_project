@@ -21,11 +21,12 @@ mongoose.connect(dbUrl)
 
 
 
-app.post('', middleware.cookieJwtAuth,(req, res) => {
-    const userId = req.user.id
+app.post('', middleware.verifyToken,middleware.validateInputs,async(req, res) => {
+    const userId = req.userId
     const { name, cost, quantity } = req.body;
     try {
-        const ProductsDoc = Products.create({userId ,name, cost, quantity, });
+        const ProductsDoc = await Products.create({userId ,name, cost, quantity, });
+        console.log(ProductsDoc)
         res.json({'message':'itme was added'});
     } catch (err) {
         console.log(err);

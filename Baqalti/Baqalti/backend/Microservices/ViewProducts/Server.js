@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cors(
 ));
 
-const port = process.env.PORT || 7060;
+const port = process.env.PORT || 7050;
 const dbUrl = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/Baqalti';
 
 mongoose.connect(dbUrl)
