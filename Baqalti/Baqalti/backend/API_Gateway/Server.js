@@ -76,22 +76,16 @@ app.post('/Add', (req, res) => {
   });
 });
 
-// app.post('/Add',middleware.AddRequiredFields,middleware.AddFieldType,middleware.verifyTokenExisting, (req, res) => {
-//   const token = req.token;
-//   const { name, cost, quantity } = req.body;
-//   const options = { headers: { Cookie: `token=${token}` }, json: { name, cost, quantity } };
-//   request.post(AddProducts, options, (error, response, body) => {
-//     if (response.statusCode != 200) {
-//       res.status(response.statusCode).json(body);
-//     } else {
-//       res.send(body);
-//     }
-//   });
-// });
-
-
-
-
+app.post('/Register',(req, res) => {
+  const { name, phone, email, username, password } = req.body;
+  request.post(Register, { json: { name, phone, email, username, password } }, (error, response, body) => {
+    if (response.statusCode !== 200) {
+      res.status(response.statusCode).json(body);
+    } else {
+      res.json(body);
+    }
+  });
+});
 
 // app.post('/Register',middleware.checkRequiredFieldsRegister,middleware.checkRequiredFieldsRegisterType, (req, res) => {
 //   const { name, phone, email, username, password } = req.body;
