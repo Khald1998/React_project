@@ -20,14 +20,9 @@ mongoose.connect(dbUrl)
     .catch((err) => console.log(err));
 
 
-
-app.post('',middleware.verifyToken, middleware.verifyStrings,middleware.verifyPassword,(req, res) => {
-    
+app.post('',middleware.verifyToken,middleware.verifyStrings,middleware.verifyPassword, (req, res) => {
     res.cookie('token', req.token, { maxAge: 900000}).json({ "new token":req.token, "message": "Login was successful by email","admin":req.adminPrivilege  });
 });
-
-
-
 
 
 app.listen(port, () => {

@@ -8,7 +8,7 @@ app.use(cors());
 const port = process.env.PORT || 7020;
 
 app.post('', (req, res) => {
-    res.clearCookie('token').json({'message':' You are logged out'});
+    res.json({'message':' You are logged out'});
 });
 
 app.listen(port, () => {

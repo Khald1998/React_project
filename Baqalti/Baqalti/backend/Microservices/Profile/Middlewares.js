@@ -5,28 +5,30 @@ require('dotenv').config();
 const jwtSecret = process.env.SECRET;
 
 // Middleware function
-const verifyToken = (req, res, next) => {
-    const { token } = req.cookies;
-    console.log(token)
-    jwt.verify(token, jwtSecret, {}, (err, userData) => {
-        if (err) {
-            return res.status(401).json({ 'message': 'invalid Bearer token' });
+const verifyToken = async (req, res, next) => {
+    const { token } = req.body;
+    if (!token) {
+        return res.status(400).json({ message: 'No token was given' });
+    }
+
+    try {
+        const userData = await jwt.verify(token, jwtSecret);
+        const userDoc = await User.findById(userData.id);
+        if (!userDoc) {
+            return res.status(401).json({ message: 'User not found' });
         }
 
-        User.findById(userData.id)
-            .then((userDoc) => {
-                req.userData = {
-                    name: userDoc.name,
-                    username: userDoc.username,
-                    email: userDoc.email,
-                    phone: userDoc.phone,
-                };
-                next();
-            })
-            .catch((err) => {
-                res.status(401).json({ 'message': err });
-            });
-    });
+        req.userData = {
+            name: userDoc.name,
+            username: userDoc.username,
+            email: userDoc.email,
+            phone: userDoc.phone,
+        };
+        next();
+    } catch (err) {
+        console.log(err)
+        return res.status(401).json({ message: 'Invalid Bearer token' });
+    }
 };
 
 
