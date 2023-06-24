@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const User = require('./models/User');
+const middleware = require('./Middlewares');
 const cors = require('cors');
 require('dotenv').config();
 
@@ -16,7 +17,7 @@ mongoose.connect(dbUrl)
   .then(() => console.log('Register is connected to MongoDB'))
   .catch((err) => console.log(err));
 
-app.post('', async (req, res) => {
+app.post('',middleware.validateFieldTypes,middleware.validateRequiredFields ,async (req, res) => {
   const { name, phone, email, username, password } = req.body;
   try {
     const hashedPassword = bcrypt.hashSync(password, 10);

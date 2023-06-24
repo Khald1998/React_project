@@ -87,30 +87,16 @@ app.post('/Register',(req, res) => {
   });
 });
 
-// app.post('/Register',middleware.checkRequiredFieldsRegister,middleware.checkRequiredFieldsRegisterType, (req, res) => {
-//   const { name, phone, email, username, password } = req.body;
-//   request.post(Register, { json: { name, phone, email, username, password } }, (error, response, body) => {
-//     if (response.statusCode !== 200) {
-//       res.status(response.statusCode).json(body);
-//     } else {
-//       res.json(body);
-//     }
-//   });
-// });
+app.get('/View', (req, res) => {
+  request(ViweProducts, (error, response, body) => {
+    if (error) {
+      res.status(500).json({ error: 'Failed to retrieve products' });
+    } else {
 
-// app.get('/View', (req, res) => {
-//   request(ViweProducts, (error, response, body) => {
-//     if (error) {
-//       res.status(500).json({ error: 'Failed to retrieve products' });
-//     } else {
-
-//       res.status(response.statusCode).json(JSON.parse(body));
-//     }
-//   });
-// });
-
-
-
+      res.status(response.statusCode).json(JSON.parse(body));
+    }
+  });
+});
 
 app.listen(port, () => {
   console.log(`API gateway listening on port ${port}`);
