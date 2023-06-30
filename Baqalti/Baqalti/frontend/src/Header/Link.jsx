@@ -1,5 +1,5 @@
 
-function Header(props) {
+function Link(props) {
   return (
     <>
       <li>
@@ -14,4 +14,4 @@ function Header(props) {
   );
 }
 
-export default Header;
+export default Link;

@@ -1,8 +1,9 @@
 import Link from "./Link";
-function Header() {
+function Links() {
   return (
     <>
-      <ul className="font-medium flex flex-row bg-white">
+      <ul className="flex flex-row 
+      max-sm:hidden">
         <Link text='Home' link='/'/>
         <Link text='About us' link='/AboutUs'/>
         <Link text='Register' link='/Register'/>
@@ -16,4 +17,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Links;

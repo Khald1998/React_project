@@ -4,9 +4,9 @@ import {
 } from "react-router-dom";
 
 
-import MainPage from "./Pages/MainPage/MainPage";
+import MainPage from "./Pages/MainPage/Main";
 import AboutUs from "./Pages/AboutUsPage/AboutUsPage";
-import Register from "./Pages/RegisterPage/RegisterPage";
+import Register from "./Pages/RegisterPage/Main";
 import Login from "./Pages/LoginPage/LoginPage";
 import Profile from "./Pages/ProfilePage/ProfilePage";
 import NotFound from "./Pages/NotFoundPage/NotFoundPage";
@@ -14,7 +14,7 @@ import Logout from "./Pages/LogoutPage/LogoutPage";
 import AddProducts from "./Pages/AddProductsPage/AddProductsPage"
 import ViewProducts from "./Pages/ViewProductsPage/ViewProductsPage"
 
-import Header from "./Header/Header";
+import Header from "./Header/Main";
 
 function App() {
   return (
