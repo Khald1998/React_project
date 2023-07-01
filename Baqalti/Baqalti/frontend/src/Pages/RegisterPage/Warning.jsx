@@ -1,13 +1,13 @@
-function Warning() {
+function Warning(props) {
   return (
     <>
-      <div
-        className="bg-red-100 w-11/12 mx-auto text-red-700 p-4 rounded-3xl"
-        role="alert"
-      >
-        <p className="font-bold">Error</p>
-        <p>Invalid email or password.</p>
-      </div>
+        <div
+          className="bg-red-100 mx-14 p-4 text-red-700 rounded-3xl"
+          role="alert"
+        >
+          <p className="font-bold"> {props.amount} Error{props.amount>1?'s':''}</p>
+          <p>Invalid input: <span className="font-bold">{props.error}</span></p>
+        </div>
     </>
   );
 }

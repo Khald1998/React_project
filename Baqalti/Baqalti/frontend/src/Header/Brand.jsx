@@ -3,9 +3,9 @@ function Brand() {
   return (
     <>
       <div className="">
-        <a href="/" className="flex items-center justify-between gap-x-2 max-sm:px-2 max-sm:py-1">
+        <a href="/" className="flex items-center justify-between">
             <img className='h-14 w-auto' src={Logo} alt="Logo" />
-          <span className="max-sm:font-semibold max-sm:text-xl">
+          <span className="max-sm:font-semibold max-sm:text-xl xl:text-2xl">
             Baqalti
           </span>
         </a>

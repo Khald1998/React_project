@@ -1,11 +1,18 @@
+import { useNavigate } from "react-router-dom";
 
 function Link(props) {
+  const navigate = useNavigate();
+  const handleClick = (event) => {
+    event.preventDefault(); // Prevents the default link behavior
+    navigate(props.link); // Navigates to props.link
+  };
   return (
     <>
       <li>
         <a
           href={props.link}
-          className={`block p-0 mx-2 text-gray-900 hover:text-blue-700`}
+          onClick={handleClick} 
+          className="block max-sm:py-2 max-sm:px-4 max-sm:text-white max-sm:hover:text-nav-text max-sm:rounded max-sm:hover:bg-gray-100 xl:bg-transparent xl:border-0 xl:text-black xl:hover:text-prime xl:p-0 transition-all ease-in-out duration-300"
         >
           {props.text}
         </a>

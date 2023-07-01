@@ -15,6 +15,7 @@ import AddProducts from "./Pages/AddProductsPage/AddProductsPage"
 import ViewProducts from "./Pages/ViewProductsPage/ViewProductsPage"
 
 import Header from "./Header/Main";
+import Footer from "./Footer/Main";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/ViewProducts" exact Component={ViewProducts} />
         <Route path="/*" exact Component={NotFound} />
       </Routes>
+      <Footer />
     </>
   );
 }
