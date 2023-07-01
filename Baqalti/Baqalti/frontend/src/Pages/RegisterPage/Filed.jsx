@@ -34,6 +34,7 @@ function Filed(props) {
           className="border-2 border-prime p-2 w-full rounded-lg focus:outline-none focus:border-blue-400"
           value={value}
           onChange={handleChange}
+          onBlur={props.onBlur} 
         />
       </div>
     </>
