@@ -12,7 +12,7 @@ function validateRequiredFields(req, res, next) {
     const { name, phone, email, username, password } = req.body;
     if (
       typeof name !== 'string' ||
-      typeof phone !== 'number' ||
+      typeof phone !== 'string' ||
       typeof email !== 'string' ||
       typeof username !== 'string' ||
       typeof password !== 'string'

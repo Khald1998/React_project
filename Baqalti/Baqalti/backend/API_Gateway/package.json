@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"cd ../Microservices/ViewProducts && node Server.js\" \"node Server.js\" \"cd ../Microservices/Register && npm start\" \"cd ../Microservices/Profile && npm start\" \"cd ../Microservices/Logout && npm start\" \"cd ../Microservices/AddProducts && npm start\" \"cd ../Microservices/Login && npm start\"",
-    "dev": "concurrently \"cd ../Microservices/ViewProducts && nodemon Server.js\" \"nodemon Server.js\" \"cd ../Microservices/Register && npm run dev\" \"cd ../Microservices/Profile && npm run dev\" \"cd ../Microservices/Logout && npm run dev\" \"cd ../Microservices/AddProducts && npm run dev\" \"cd ../Microservices/Login && npm run dev\"",
-    "i": "concurrently \"cd ../Microservices/ViewProducts && npm i\" \"cd ../Microservices/Register && npm i\" \"cd ../Microservices/Profile && npm i\" \"cd ../Microservices/Logout && npm i\" \"cd ../Microservices/AddProducts && npm i\" \"cd ../Microservices/Login && npm i\""
+    "start": "concurrently \"cd ../Microservices/isPhoneUsed && node Server.js\" \"cd ../Microservices/isUsernameUsed && node Server.js\" \"cd ../Microservices/isEmailUsed && node Server.js\" \"cd ../Microservices/ViewProducts && node Server.js\" \"node Server.js\" \"cd ../Microservices/Register && npm start\" \"cd ../Microservices/Profile && npm start\" \"cd ../Microservices/Logout && npm start\" \"cd ../Microservices/AddProducts && npm start\" \"cd ../Microservices/Login && npm start\"",
+    "dev": "concurrently \"cd ../Microservices/isPhoneUsed && nodemon Server.js\" \"cd ../Microservices/isUsernameUsed && nodemon Server.js\" \"cd ../Microservices/isEmailUsed && nodemon Server.js\" \"cd ../Microservices/ViewProducts && nodemon Server.js\" \"nodemon Server.js\" \"cd ../Microservices/Register && npm run dev\" \"cd ../Microservices/Profile && npm run dev\" \"cd ../Microservices/Logout && npm run dev\" \"cd ../Microservices/AddProducts && npm run dev\" \"cd ../Microservices/Login && npm run dev\"",
+    "i": "concurrently \"cd ../Microservices/isPhoneUsed && npm i\" \"cd ../Microservices/isUsernameUsed && npm i\" \"cd ../Microservices/isEmailUsed && npm i\" \"cd ../Microservices/ViewProducts && npm i\" \"cd ../Microservices/Register && npm i\" \"cd ../Microservices/Profile && npm i\" \"cd ../Microservices/Logout && npm i\" \"cd ../Microservices/AddProducts && npm i\" \"cd ../Microservices/Login && npm i\""
   },
   "keywords": [],
   "author": "",

@@ -16,7 +16,45 @@ const Logout = process.env.LOGOUT || "http://localhost:7020";
 const Profile = process.env.PROFILE || "http://localhost:7030";
 const Register = process.env.REGISTER || "http://localhost:7040";
 const ViweProducts = process.env.VIEW || "http://localhost:7050";
+const isEmailUsed = process.env.VIEW || "http://localhost:7060";
+const isUsernameUsed = process.env.VIEW || "http://localhost:7070";
+const isPhoneUsed = process.env.VIEW || "http://localhost:7080";
 
+app.post('/isEmailUsed', (req, res) => {
+  const { email } = req.body;
+  const options = { json: { email } };
+  request.post(isEmailUsed, options, (error, response, body) => {
+    if (error) {
+      res.status(500).json({ "This is the error: ": error });
+    } else {
+      res.json(body);
+    }
+  });
+});
+
+app.post('/isUsernameUsed', (req, res) => {
+  const { username } = req.body;
+  const options = { json: { username } };
+  request.post(isUsernameUsed, options, (error, response, body) => {
+    if (error) {
+      res.status(500).json({ "This is the error: ": error });
+    } else {
+      res.json(body);
+    }
+  });
+});
+
+app.post('/isPhoneUsed', (req, res) => {
+  const { phone } = req.body;
+  const options = { json: { phone } };
+  request.post(isPhoneUsed, options, (error, response, body) => {
+    if (error) {
+      res.status(500).json({ "This is the error: ": error });
+    } else {
+      res.json(body);
+    }
+  });
+});
 
 app.post('/Login', (req, res) => {
 
@@ -50,14 +88,14 @@ app.post('/Logout', (req, res) => {
 
 app.post('/Profile', (req, res) => {
   const { token } = req.cookies;
-  const options = { json: { token} };
-    request.post(Profile, options, (error, response, body) => {
-      if (response.statusCode != 200) {
-        res.status(response.statusCode).json(body);
-      } else {
-        res.json(body);
-      }
-    });
+  const options = { json: { token } };
+  request.post(Profile, options, (error, response, body) => {
+    if (response.statusCode != 200) {
+      res.status(response.statusCode).json(body);
+    } else {
+      res.json(body);
+    }
+  });
 
 });
 
@@ -66,7 +104,7 @@ app.post('/Profile', (req, res) => {
 app.post('/Add', (req, res) => {
   const { token } = req.cookies;
   const { name, cost, quantity } = req.body;
-  const options = {  json: {token, name, cost, quantity } };
+  const options = { json: { token, name, cost, quantity } };
   request.post(AddProducts, options, (error, response, body) => {
     if (response.statusCode != 200) {
       res.status(response.statusCode).json(body);
@@ -76,7 +114,7 @@ app.post('/Add', (req, res) => {
   });
 });
 
-app.post('/Register',(req, res) => {
+app.post('/Register', (req, res) => {
   const { name, phone, email, username, password } = req.body;
   request.post(Register, { json: { name, phone, email, username, password } }, (error, response, body) => {
     if (response.statusCode !== 200) {
@@ -97,6 +135,12 @@ app.get('/View', (req, res) => {
     }
   });
 });
+
+app.post('/test', (req, res) => {
+  console.log(req.body)
+  res.status(200)
+});
+
 
 app.listen(port, () => {
   console.log(`API gateway listening on port ${port}`);

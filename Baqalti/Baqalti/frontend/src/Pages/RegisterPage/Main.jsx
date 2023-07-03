@@ -1,102 +1,64 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import useWarningAmount from "./Hooks/useWarningAmount";
+import useShowWarning from "./Hooks/useShowWarning";
+import useGreenLight from "./Hooks/useGreenLight";
+
 import Filed from "./Filed";
 import Warning from "./Warning";
 import Button from "./Button";
-import Filter from "bad-words"; // Import the bad-words library and rename it to Filter
+import {debouncedHandleEmailChange,debouncedHandleUsernameChange,debouncedHandlePhoneChange,validateName,validatePassword,handleSubmit,} from "./FormUtils";
 
-function RegisterPage() {
+function Main() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-
   const [showWarning, setShowWarning] = useState(false);
   const [warningAmount, setWarningAmount] = useState(0);
-
   const [FiledNameError, setFiledNameError] = useState(null);
   const [FiledPhoneError, setFiledPhoneError] = useState(null);
   const [FiledEmailError, setFiledEmailError] = useState(null);
   const [FiledUsernameError, setFiledUsernameError] = useState(null);
   const [FiledPasswordError, setFiledPasswordError] = useState(null);
+  const [greenLight, setGreenLight] = useState(false);
 
-  const filter = new Filter(); // Create an instance of the bad-words filter
-
-  useEffect(() => {
-    // Count the non-null errors
-    const errorCount =
-      (FiledNameError !== null ? 1 : 0) +
-      (FiledPhoneError !== null ? 1 : 0) +
-      (FiledEmailError !== null ? 1 : 0) +
-      (FiledUsernameError !== null ? 1 : 0) +
-      (FiledPasswordError !== null ? 1 : 0);
-
-    // Set the warningAmount state
-    setWarningAmount(errorCount);
-  }, [
-    FiledNameError,
-    FiledPhoneError,
-    FiledEmailError,
-    FiledUsernameError,
-    FiledPasswordError,
-  ]);
-
-  useEffect(() => {
-    // Count the non-null errors
-    const errorCount = warningAmount;
-    if (errorCount > 0) {
-      setShowWarning(true);
-    } else {
-      setShowWarning(false);
-    }
-  }, [warningAmount]);
+  useWarningAmount(FiledNameError,FiledPhoneError,FiledEmailError,FiledUsernameError,FiledPasswordError,setWarningAmount);
+  useShowWarning(warningAmount, setShowWarning);
+  useGreenLight(warningAmount,name,email,username,phone,password,setGreenLight);
 
   const handleNameChange = (value) => {
     setName(value);
-    if (filter.isProfane(value)) {
-      setFiledNameError("Name is bad");
-    } else {
-      setFiledNameError(null);
-    }
+    validateName(value, setFiledNameError);
   };
 
   const handleEmailChange = (value) => {
     setEmail(value);
-    
+    debouncedHandleEmailChange(value, setFiledEmailError);
   };
 
-  const isEmailUsed = () => {
-    // Perform actions when the input field is deselected
-    console.log('Input field deselected');
-  };
-
-  
   const handleUsernameChange = (value) => {
     setUsername(value);
-    
+    debouncedHandleUsernameChange(value, setFiledUsernameError);
   };
 
   const handlePhoneChange = (value) => {
     setPhone(value);
-    if (value.length > 0) {
-      const isValidSaudiNumber = /^9665\d{8}$/.test(value);
-      if (!isValidSaudiNumber) {
-        setFiledPhoneError("Phone is not Valid");
-      } else {
-        setFiledPhoneError(null);
-      }
-    } else {
-      setFiledPhoneError("Phone should not be empty");
-    }
+    debouncedHandlePhoneChange(value, setFiledPhoneError);
   };
 
   const handlePasswordChange = (value) => {
     setPassword(value);
-    if (value.length < 4) {
-      setFiledPasswordError("Password is short");
-    } else {
-      setFiledPasswordError(null);
-    }
+    validatePassword(value, setFiledPasswordError);
+  };
+
+  const handleFormSubmit = () => {
+    handleSubmit(
+      name,
+      email,
+      username,
+      phone,
+      password);
   };
 
   return (
@@ -119,7 +81,6 @@ function RegisterPage() {
                   Label="Email"
                   PlaceHolder="Enter your Email"
                   onChange={handleEmailChange}
-                  onBlur={isEmailUsed}
                 />
                 <Filed
                   Id="Username"
@@ -151,7 +112,14 @@ function RegisterPage() {
                 />
               </div>
               <div className="flex justify-center items-center">
-                <Button />
+                <Button
+                  onClick={handleFormSubmit}
+                  CSS={`${
+                    greenLight
+                      ? ""
+                      : "cursor-not-allowed focus:outline-none opacity-50"
+                  }`}
+                />
               </div>
             </div>
           </div>
@@ -161,4 +129,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage;
+export default Main;

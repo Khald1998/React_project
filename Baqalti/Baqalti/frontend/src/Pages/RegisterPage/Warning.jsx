@@ -6,7 +6,7 @@ function Warning(props) {
           role="alert"
         >
           <p className="font-bold"> {props.amount} Error{props.amount>1?'s':''}</p>
-          <p>Invalid input: <span className="font-bold">{props.error}</span></p>
+          <p>Invalid input{props.amount>1?'s':''} </p>
         </div>
     </>
   );
