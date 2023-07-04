@@ -58,8 +58,8 @@ export async function checkUsernameExistence(username, setFiledUsernameError) {
       setFiledUsernameError(null);
     }
   } catch (error) {
-    console.error("Error checking email existence:", error);
-    setFiledUsernameError("Error occurred while checking email existence");
+    console.error("Error checking Username existence:", error);
+    setFiledUsernameError("Error occurred while checking Username existence");
   }
 }
 

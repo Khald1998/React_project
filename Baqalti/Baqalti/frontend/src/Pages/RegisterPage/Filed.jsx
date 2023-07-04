@@ -18,14 +18,12 @@ function Filed(props) {
 
   return (
     <>
-      <div className="px-16 py-2">
+      <div className="max-sm:mx-5 max-sm:w-72 xl:px-16 py-2">
         <div className='flex justify-between'>
         <label htmlFor={props.Id} className="inline-block text-gray-700 font-bold mb-2">
           {props.Label}
         </label>
-        {props.error && (
-            <p className="inline-block text-red-500">{props.error}</p>
-          )}
+            <p className={`inline-block text-red-500 ${props.error ? 'opacity-100':'opacity-0'} transition-all duration-1000`}>{props.error}</p>
         </div>
         <input
           id={props.Id}

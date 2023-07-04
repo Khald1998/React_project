@@ -6,7 +6,14 @@ import useGreenLight from "./Hooks/useGreenLight";
 import Filed from "./Filed";
 import Warning from "./Warning";
 import Button from "./Button";
-import {debouncedHandleEmailChange,debouncedHandleUsernameChange,debouncedHandlePhoneChange,validateName,validatePassword,handleSubmit,} from "./FormUtils";
+import {
+  debouncedHandleEmailChange,
+  debouncedHandleUsernameChange,
+  debouncedHandlePhoneChange,
+  validateName,
+  validatePassword,
+  handleSubmit,
+} from "./Functions";
 
 function Main() {
   const [name, setName] = useState("");
@@ -23,9 +30,24 @@ function Main() {
   const [FiledPasswordError, setFiledPasswordError] = useState(null);
   const [greenLight, setGreenLight] = useState(false);
 
-  useWarningAmount(FiledNameError,FiledPhoneError,FiledEmailError,FiledUsernameError,FiledPasswordError,setWarningAmount);
+  useWarningAmount(
+    FiledNameError,
+    FiledPhoneError,
+    FiledEmailError,
+    FiledUsernameError,
+    FiledPasswordError,
+    setWarningAmount
+  );
   useShowWarning(warningAmount, setShowWarning);
-  useGreenLight(warningAmount,name,email,username,phone,password,setGreenLight);
+  useGreenLight(
+    warningAmount,
+    name,
+    email,
+    username,
+    phone,
+    password,
+    setGreenLight
+  );
 
   const handleNameChange = (value) => {
     setName(value);
@@ -53,20 +75,15 @@ function Main() {
   };
 
   const handleFormSubmit = () => {
-    handleSubmit(
-      name,
-      email,
-      username,
-      phone,
-      password);
+    handleSubmit(name, email, username, phone, password);
   };
 
   return (
     <>
-      <section className="h-screen w-full my-16">
-        <div className="flex justify-center items-center h-full w-full ">
-          <div className="w-1/2 mt-10">
-            <div className="bg-nav border-2 border-prime w-full h-full rounded-3xl flex flex-col justify-center py-8 relative">
+      <section className={`h-screen w-full ${!showWarning ? "max-sm:mt-20":"max-sm:mt-44 max-sm:mb-24"} ${!showWarning ? "xl:mt-14":"xl:mt-28 xl:mb-28"}`}>
+        <div className="flex justify-center items-center h-full w-full">
+          <div className="xl:w-1/2 ">
+            <div className="bg-nav border-2 border-prime w-full h-full rounded-3xl flex flex-col justify-center py-8">
               <div
                 className={`${
                   !showWarning ? "opacity-0 h-0" : "opacity-100 h-24"
@@ -116,7 +133,7 @@ function Main() {
                   onClick={handleFormSubmit}
                   CSS={`${
                     greenLight
-                      ? ""
+                      ? "hover:bg-prime hover:text-white"
                       : "cursor-not-allowed focus:outline-none opacity-50"
                   }`}
                 />
