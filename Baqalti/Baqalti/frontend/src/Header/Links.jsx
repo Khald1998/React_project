@@ -4,8 +4,7 @@ function Links(props) {
     <>
 
       <div className={`w-full bg-nav transition-all ease-in-out duration-300  
-      max-sm:pt-2 max-sm:pb-4 ${props.toggled?'max-sm:absolute max-sm:top-full':'max-sm:absolute max-sm:-top-96'}
-      
+      max-sm:pt-2 max-sm:pb-4  ${props.toggled?'max-sm:absolute max-sm:top-full':'max-sm:absolute max-sm:-top-96'}
       
       `}>
         <ul className="flex flex-col font-medium xl:flex-row  
