@@ -12,7 +12,10 @@ function Link(props) {
         <a
           href={props.link}
           onClick={handleClick} 
-          className="block max-sm:py-2 sm:py-2 max-sm:px-4 sm:px-4 max-sm:text-white sm:text-white max-sm:hover:text-nav-text sm:hover:text-nav-text max-sm:rounded sm:rounded max-sm:hover:bg-gray-100 sm:hover:bg-gray-100 xl:bg-transparent xl:border-0 xl:text-black xl:hover:text-prime xl:p-0 transition-all ease-in-out duration-300"
+          className="block transition-all ease-in-out duration-300
+          max-sm:p-2 max-sm:text-white max-sm:hover:text-nav-text max-sm:rounded max-sm:hover:bg-white
+           
+          xl:bg-transparent xl:border-0 xl:text-black xl:hover:text-prime xl:p-0"
         >
           {props.text}
         </a>
