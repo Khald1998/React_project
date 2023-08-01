@@ -12,14 +12,14 @@ function Main() {
         <nav className="relative ">
           <div className="relative bg-nav flex items-center justify-between z-50
           max-sm:px-4 max-sm:py-1 
-           
+          sm:px-4
           xl:px-8 xl:py-2
           ">
             <Brand />
-            <div className="sm:hidden"><Hamburger toggled={isOpen} toggle={setOpen} /></div>
-            <div className="max-sm:hidden "><Links toggled={true}/></div>
+            <div className="md:hidden"><Hamburger toggled={isOpen} toggle={setOpen} /></div>
+            <div className="max-md:hidden "><Links toggled={true}/></div>
           </div>
-          <div className="sm:hidden"><Links toggled={isOpen}  /></div>
+          <div className="md:hidden"><Links toggled={isOpen}  /></div>
         </nav>
       </header>
     </>
