@@ -12,7 +12,7 @@ function Main() {
         <nav className="relative ">
           <div className="relative bg-nav flex items-center justify-between z-50
           max-sm:px-4 max-sm:py-1 
-          
+
           sm:px-4 sm:py-0
 
           md:px-4 md:py-1
@@ -24,7 +24,7 @@ function Main() {
           xl:px-8 xl:py-1 
           ">
             <Brand />
-            <div className="big:hidden"><Hamburger toggled={isOpen} toggle={setOpen} /></div>
+            <div className="big:hidden "><Hamburger toggled={isOpen} toggle={setOpen} size={30} /></div>
             <div className="max-big:hidden"><Links toggled={true}/></div>
           </div>
           <div className="big:hidden"><Links toggled={isOpen}  /></div>

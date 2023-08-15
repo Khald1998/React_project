@@ -8,6 +8,12 @@ function Brand() {
         ">
           <img className='w-auto pr-2
 
+          mobs:h-12
+
+          mobm:h-12
+
+          mobl:h-12
+
           sm:h-12
 
           md:h-12
@@ -18,7 +24,13 @@ function Brand() {
 
           xl:h-10 
           ' src={Logo} alt="Logo" />
-          <span className="font-semibold 
+          <span className="font-semibold
+          
+          mobs:text-lg
+
+          mobm:text-lg
+
+          mobl:text-lg
 
           sm:text-lg
           
