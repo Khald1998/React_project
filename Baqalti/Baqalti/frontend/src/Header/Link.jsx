@@ -1,7 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom'
+
 
 function Link(props) {
+  const location = useLocation().pathname;
   const navigate = useNavigate();
+  
+
   const handleClick = (event) => {
     event.preventDefault(); // Prevents the default link behavior
     navigate(props.link); // Navigates to props.link
@@ -12,7 +17,7 @@ function Link(props) {
         <a
           href={props.link}
           onClick={handleClick} 
-          className="block transition-all ease-in-out duration-300
+          className={`block transition-all ease-in-out duration-300
           max-sm:p-2   
 
           mobs:text-white mobs:hover:text-nav-text mobs:hover:bg-white mobs:rounded mobs:px-2 mobs:py-1
@@ -29,7 +34,11 @@ function Link(props) {
 
           lg:text-lg lg:p-0
 
-          xl:bg-transparent xl:border-0 xl:text-black xl:hover:text-prime xl:p-0 xl:text-lg"
+          xl:bg-transparent xl:border-0 xl:text-black xl:hover:text-prime xl:p-0 xl:text-lg
+
+          ${props.link==location?"xl:text-prime":""}
+          
+          `}
         >
           {props.text}
         </a>
