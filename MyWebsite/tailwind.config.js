@@ -23,6 +23,7 @@ export default {
         'xs': '420px',
       },
       backgroundImage: {
+        'img-background': "url('/src/assets/Background-1.svg')",
         'img-pattern': "url('/src/assets/future-grid.webp')",
         'img-me': "url('/src/assets/Me.JPG')",
       },

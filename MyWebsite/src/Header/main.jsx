@@ -20,7 +20,10 @@ function App() {
 
   return (
     <>
-      <section className={`  md:flex md:justify-center ${isTop ? "" : "md:mt-5"} transition-all duration-200`} >
+      <section className={` transition-all duration-200  
+      ${isTop ? "" : "md:mt-5"} 
+      md:flex md:justify-center
+      `} >
         <div
           className={`
           fixed text-whitey transition-all duration-500 z-50 w-full
