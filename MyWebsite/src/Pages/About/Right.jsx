@@ -1,15 +1,11 @@
 import Info from "./Info";
 
 function Right() {
-    return (
-      <>
+  return (
+    <>
+      <Info />
+    </>
+  );
+}
 
-          <Info />
-      
-
-      </>
-    );
-  }
-  
-  export default Right;
-  
+export default Right;

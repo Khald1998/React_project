@@ -16,7 +16,7 @@ function Left() {
       
       "
       >
-        <div className="xl:w-[45%] md:w-[40%] xs:w-[75%] max-xs:w-[100%]  aspect-square bg-img-background bg-contain bg-no-repeat absolute z-10"></div>
+        <div className="xl:w-[45%] md:w-[40%] xs:w-[75%] max-xs:w-[90%]  aspect-square bg-img-background bg-contain bg-no-repeat absolute z-10"></div>
         <div
           className="aspect-square flex justify-center items-center relative
           xxs:w-8/12

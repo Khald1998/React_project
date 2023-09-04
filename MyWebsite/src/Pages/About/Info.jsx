@@ -109,66 +109,129 @@ function Info() {
 
   return (
     <>
-      <div className={`bg-inherit flex justify-center mx-auto 
+      <div
+        className={`bg-inherit flex justify-center mx-auto 
       xxs:h-fit xxs:w-5/6 xxs:items-start
       xs:w-4/6
-      ${!loadedAll?"sm:h-[50lvh]":"sm:h-fit"}
+      
       md:col-span-7 md:items-center md:h-[70lvh] md:w-11/12 md:ml-0
       xl:h-[100lvh] xl:col-span-6 
 
-      
-      `}>
-        <div className="my-5 mx-auto flex flex-col justify-start items-start ">
-          <div className="w-full flex justify-start items-center">
-            <h1 className="font-bold text-tertiary uppercase
+      z
+      `}
+      >
+        <div className="my-5 mx-auto flex flex-col justify-start items-start max-md:w-full">
+
+          <div>
+            <div className="w-full flex justify-start items-center">
+              <h1
+                className="font-bold text-tertiary uppercase
             xxs:text-base
             xs:text-lg
             sm:text-xl
             md:text-base
             lg:text-2xl
-            ">
-              About
-            </h1>
-          </div>
-          <div className="w-full flex justify-start items-center 
+            "
+              >
+                About
+              </h1>
+            </div>
+            <div
+              className="w-full flex justify-start items-center 
           xxs:h-10 xxs:my-4
           lg:my-8 lg:h-16
-          ">
-            <h3 className="font-bold text-white font-dynamic 
+          "
+            >
+              <h3
+                className="font-bold text-white font-dynamic 
             xxs:text-xl
             xs:text-2xl
             sm:text-3xl
             md:text-xl
             lg:text-4xl
             xl:text-5xl
-            ">
-              {displayedBuzzword}
-            </h3>
+            "
+              >
+                {displayedBuzzword}
+              </h3>
+            </div>
           </div>
-          <div className=" 
+
+          <div className={`relative max-md:mx-auto max-md:w-full ${!loadedAll ? "max-xxs:h-[190px] max-mobM:h-[205px] max-xs:h-[200px] max-sm:h-[230px] max-md:h-[210px]" : "max-xxs:h-[500px] max-mobM:h-[620px] max-xs:h-[535px] max-sm:h-[595px] max-md:h-[535px]"} transition-all ease-in-out duration-300`}>
+            <div
+              className=" 
           xxs:text-sm
           xs:text-base
           sm:text-lg
           md:text-sm
           lg:text-base 
-          ">
-            <p className="leading-relaxed text-white ">
-              I'm <span className="text-tertiary"> Khaled Alzahrani</span>, a<span className="text-tertiary"> highly motivated</span> student seeking an internship in the <span className="text-tertiary"> cloud</span> and<span className="text-tertiary"> computer engineering</span> field. With a strong background in<span className="text-tertiary"> computer engineering</span>
-              <span className={`md:hidden ${!loadedAll ? "" : "hidden"}`}>...</span>
-              <span className={`${!loadedAll ? "max-md:hidden" : ""}`}>
-                , including experience in<span className="text-tertiary"> embedded systems</span> and<span className="text-tertiary"> web development</span>, I ameager to enhance my <span className="text-tertiary"> social</span> and <span className="text-tertiary"> engineering skills</span> while pursuing my ambitions. I possess a <span className="text-tertiary"> proactive mindset</span>, excellent<span className="text-tertiary"> problem-solving abilities</span>, and a passion for staying up-to-date with the <span className="text-tertiary"> latest technologies</span>. I thrive in<span className="text-tertiary"> collaborative environments </span>and am driven to contribute to the advancement of the industry. With a strong <span className="text-tertiary"> work ethic </span>and a commitment to <span className="text-tertiary"> continuous growth</span>, I am confident in my ability to make a valuable contribution as an <span className="text-tertiary"> intern</span>.
-            </span>
-            </p>
-          </div>
-          <div className="mx-auto w-full
+
+          max-md:absolute max-md:left-0 max-md:right-0 max-md:top-0 max-md:mx-auto max-xxs:w-full max-xs:w-[80%]
+          "
+            >
+              <p className="leading-relaxed text-white ">
+                I'm <span className="text-tertiary"> Khaled Alzahrani</span>, a
+                <span className="text-tertiary"> highly motivated</span> student
+                seeking an internship in the{" "}
+                <span className="text-tertiary"> cloud</span> and
+                <span className="text-tertiary"> computer engineering</span>{" "}
+                field. With a strong background in
+                <span className="text-tertiary"> computer engineering</span>
+                <span className={`md:hidden ${!loadedAll ? "" : "hidden"}`}>
+                  ...
+                </span>
+                <span
+                  className={`${
+                    !loadedAll ? "max-md:opacity-0" : "max-md:opacity-100"
+                  } transition-opacity ease-in-out duration-700`}
+                >
+                  , including experience in
+                  <span className="text-tertiary"> embedded systems</span> and
+                  <span className="text-tertiary"> web development</span>, I
+                  ameager to enhance my{" "}
+                  <span className="text-tertiary"> social</span> and{" "}
+                  <span className="text-tertiary"> engineering skills</span>{" "}
+                  while pursuing my ambitions. I possess a{" "}
+                  <span className="text-tertiary"> proactive mindset</span>,
+                  excellent
+                  <span className="text-tertiary">
+                    {" "}
+                    problem-solving abilities
+                  </span>
+                  , and a passion for staying up-to-date with the{" "}
+                  <span className="text-tertiary"> latest technologies</span>. I
+                  thrive in
+                  <span className="text-tertiary">
+                    {" "}
+                    collaborative environments{" "}
+                  </span>
+                  and am driven to contribute to the advancement of the
+                  industry. With a strong{" "}
+                  <span className="text-tertiary"> work ethic </span>and a
+                  commitment to{" "}
+                  <span className="text-tertiary"> continuous growth</span>, I
+                  am confident in my ability to make a valuable contribution as
+                  an <span className="text-tertiary"> intern</span>.
+                </span>
+              </p>
+            </div>
+            <div
+              className="mx-auto w-full
           xxs:my-4
           sm:my-8
           md:hidden
-          ">
-          <Button text={`${!loadedAll?"Load More":"Load Less"}`} onClick={loadMore}/>
+          max-md:absolute max-md:left-0 max-md:right-0 max-md:bottom-0
+          "
+            >
+              <Button
+                text={`${!loadedAll ? "Load More" : "Load Less"}`}
+                onClick={loadMore}
+              />
+            </div>
           </div>
         </div>
       </div>
+
     </>
   );
 }

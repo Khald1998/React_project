@@ -44,7 +44,7 @@ function App() {
             </div>
             <div
               className={`absolute transition-all duration-500 w-full md:hidden ${
-                isOpen ? "top-[60px]" : "top-[-300px]"
+                isOpen ? "top-[62px]" : "top-[-300px]"
               }`}
             >
               <Link ScreenMode="small" />

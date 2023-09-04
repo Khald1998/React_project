@@ -21,6 +21,10 @@ export default {
       screens:{
         'xxs': '300px',
         'xs': '420px',
+        'ss': '480px',
+        // 'mobS': '320px',
+        'mobM': '375px',
+        // 'mobL': '425px',
       },
       backgroundImage: {
         'img-background': "url('/src/assets/Background-1.svg')",
