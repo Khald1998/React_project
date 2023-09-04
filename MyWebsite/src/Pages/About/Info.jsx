@@ -122,7 +122,7 @@ function Info() {
       >
         <div className="my-5 mx-auto flex flex-col justify-start items-start max-md:w-full">
 
-          <div>
+          <div className="w-full mx-auto max-xs:w-[80%]">
             <div className="w-full flex justify-start items-center">
               <h1
                 className="font-bold text-tertiary uppercase
