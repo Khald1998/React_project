@@ -111,16 +111,13 @@ function Info() {
     <>
       <div
         className={`bg-inherit flex justify-center mx-auto 
-      xxs:h-fit xxs:w-5/6 xxs:items-start
-      xs:w-4/6
-      
-      md:col-span-7 md:items-center md:h-[70lvh] md:w-11/12 md:ml-0
+      xxs:w-10/12 
+      xs:w-8/12
+      md:col-span-7 md:items-center md:h-[70lvh] md:w-11/12 md:ml-2
       xl:h-[100lvh] xl:col-span-6 
-
-      z
       `}
       >
-        <div className="my-5 mx-auto flex flex-col justify-start items-start max-md:w-full">
+        <div className="max-md:mb-5 mx-auto flex flex-col justify-start items-start max-md:w-full">
 
           <div className="w-full mx-auto max-xs:w-[80%]">
             <div className="w-full flex justify-start items-center">

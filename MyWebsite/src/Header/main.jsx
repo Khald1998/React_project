@@ -27,7 +27,7 @@ function App() {
         <div
           className={`
           fixed text-whitey transition-all duration-500 z-50 w-full
-          ${isOpen ? "h-[200px]" : "h-[65px]"} ${isTop ? "" : "bg-nav backdrop-blur md:rounded-3xl"}
+          ${isOpen ? "h-[200px]" : "h-[65px]"} ${isTop ? "border-none" : "bg-nav backdrop-blur md:rounded-3xl md:border-[1px] border-prime"}
               
           md:flex md:items-center md:w-10/12   
           `}
