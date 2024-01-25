@@ -122,7 +122,7 @@ function Info() {
           <div className="w-full mx-auto max-xs:w-[80%]">
             <div className="w-full flex justify-start items-center">
               <h1
-                className="font-bold text-tertiary uppercase
+                className="font-bold text-tertiary dark:text-tertiary uppercase
             xxs:text-base
             xs:text-lg
             sm:text-xl
@@ -140,7 +140,7 @@ function Info() {
           "
             >
               <h3
-                className="font-bold text-white font-dynamic 
+                className="font-bold dark:text-whitey text-blacky font-dynamic 
             xxs:text-xl
             xs:text-2xl
             sm:text-3xl
@@ -166,14 +166,14 @@ function Info() {
           max-md:absolute max-md:left-0 max-md:right-0 max-md:top-0 max-md:mx-auto max-xxs:w-full max-xs:w-[80%]
           "
             >
-              <p className="leading-relaxed text-white ">
-                I'm <span className="text-tertiary"> Khaled Alzahrani</span>, a
-                <span className="text-tertiary"> highly motivated</span> student
+              <p className="leading-relaxed dark:text-whitey text-blacky ">
+                I'm <span className="dark:text-tertiary text-tertiary"> Khaled Alzahrani</span>, a
+                <span className="dark:text-tertiary text-tertiary"> highly motivated</span> student
                 seeking an internship in the{" "}
-                <span className="text-tertiary"> cloud</span> and
-                <span className="text-tertiary"> computer engineering</span>{" "}
+                <span className="dark:text-tertiary text-tertiary"> cloud</span> and
+                <span className="dark:text-tertiary text-tertiary"> computer engineering</span>{" "}
                 field. With a strong background in
-                <span className="text-tertiary"> computer engineering</span>
+                <span className="dark:text-tertiary text-tertiary"> computer engineering</span>
                 <span className={`md:hidden ${!loadedAll ? "" : "hidden"}`}>
                   ...
                 </span>
@@ -183,32 +183,32 @@ function Info() {
                   } transition-opacity ease-in-out duration-700`}
                 >
                   , including experience in
-                  <span className="text-tertiary"> embedded systems</span> and
-                  <span className="text-tertiary"> web development</span>, I
+                  <span className="text-tertiary dark:text-tertiary"> embedded systems</span> and
+                  <span className="text-tertiary dark:text-tertiary"> web development</span>, I
                   ameager to enhance my{" "}
-                  <span className="text-tertiary"> social</span> and{" "}
-                  <span className="text-tertiary"> engineering skills</span>{" "}
+                  <span className="text-tertiary dark:text-tertiary"> social</span> and{" "}
+                  <span className="text-tertiary dark:text-tertiary"> engineering skills</span>{" "}
                   while pursuing my ambitions. I possess a{" "}
-                  <span className="text-tertiary"> proactive mindset</span>,
+                  <span className="text-tertiary dark:text-tertiary"> proactive mindset</span>,
                   excellent
-                  <span className="text-tertiary">
+                  <span className="text-tertiary dark:text-tertiary">
                     {" "}
                     problem-solving abilities
                   </span>
                   , and a passion for staying up-to-date with the{" "}
-                  <span className="text-tertiary"> latest technologies</span>. I
+                  <span className="text-tertiary dark:text-tertiary"> latest technologies</span>. I
                   thrive in
-                  <span className="text-tertiary">
+                  <span className="text-tertiary dark:text-tertiary">
                     {" "}
                     collaborative environments{" "}
                   </span>
                   and am driven to contribute to the advancement of the
                   industry. With a strong{" "}
-                  <span className="text-tertiary"> work ethic </span>and a
+                  <span className="text-tertiary dark:text-tertiary"> work ethic </span>and a
                   commitment to{" "}
-                  <span className="text-tertiary"> continuous growth</span>, I
+                  <span className="text-tertiary dark:text-tertiary"> continuous growth</span>, I
                   am confident in my ability to make a valuable contribution as
-                  an <span className="text-tertiary"> intern</span>.
+                  an <span className="text-tertiary dark:text-tertiary"> intern</span>.
                 </span>
               </p>
             </div>

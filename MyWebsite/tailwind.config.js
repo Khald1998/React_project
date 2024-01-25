@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class', 
   theme: {
 
     dropShadow: {
@@ -27,7 +28,8 @@ export default {
         // 'mobL': '425px',
       },
       backgroundImage: {
-        'img-background': "url('/src/assets/Background-1.svg')",
+        'img-background-dark': "url('/src/assets/Background-1.svg')",
+        'img-background-light': "url('/src/assets/Background-1-alt.svg')",
         'img-pattern': "url('/src/assets/future-grid.webp')",
         'img-me': "url('/src/assets/Me.JPG')",
       },
@@ -36,10 +38,22 @@ export default {
        },
       colors:{
         'whitey': '#EDEDED',
-        'second': '#1E2022',
-        'nav': 'rgba(23, 23, 23,0.4 )',
-        'footer':'#171717',
+        'blacky': '#121212',
+        'nav-light': 'rgba(164, 164, 164,0.4 )',
+        'nav-light-border': 'rgba(164, 164, 164,0.3 )',
+        'nav-dark': 'rgba(23, 23, 23,0.4 )',
+        'nav-dark-border': 'rgba(23, 23, 23,0.3 )',
         'prime': '#393E46',
+        'prime-dark': '#393E46',
+        'prime-light':'#D4D0CA',
+        'second': '#1E2022',
+        'second-dark': '#1E2022',
+        'second-light': '#D4D0CA',
+
+
+        'footer':'#171717',
+
+
         'tertiary':'#4ECCA3',
       },
     },
